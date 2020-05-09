@@ -1,0 +1,47 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Implementation/Business.Implementation.csproj",
+    "projectName": "Business.Implementation",
+    "projectPath": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Implementation/Business.Implementation.csproj",
+    "outputPath": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Implementation/obj/",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp3.1"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "projectReferences": {
+          "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Abstract/Business.Abstract.csproj": {
+            "projectPath": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Abstract/Business.Abstract.csproj"
+          },
+          "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Models/Business.Models.csproj": {
+            "projectPath": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Models/Business.Models.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp3.1": {
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}
