@@ -1,13 +1,19 @@
 using System;
 using System.Collections.Generic;
 using System.Timers;
+using AutoMapper;
 using Business.Abstract.Services;
 using Business.Models;
+using Data.Abstract;
 
 namespace Business.Implementation.Services
 {
     public class CarService : ICarService
     {
+        private readonly IMapper _mapper;
+
+        private readonly IUnitOfWork _unit;
+        
         private readonly CarModel _car;
 
         private readonly PlayerModel _player;
@@ -21,11 +27,14 @@ namespace Business.Implementation.Services
         private int _distance = 0;
 
         
-        public CarService(CarModel car, PlayerModel player, IDetailService detailService)
+        public CarService(CarModel car, PlayerModel player, IDetailService detailService, IMapper mapper, IUnitOfWork unit)
         {
             _car = car;
             _player = player;
             _detailService = detailService;
+
+            _mapper = mapper;
+            _unit = unit;
         }
 
 
