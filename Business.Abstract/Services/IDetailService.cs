@@ -6,13 +6,9 @@ namespace Business.Abstract.Services
 {
     public interface IDetailService
     {
-        // IEnumerable<DetailModel> GetAll();
+        IEnumerable<DetailModel> GetAll();
 
-        // IEnumerable<DetailModel> GetMotors();
-
-        // IEnumerable<DetailModel> GetRims();
-
-        // IEnumerable<DetailModel> GetBatteries();
+        IEnumerable<DetailModel> GetSpecial(DetailType type);
         
         void BuyDetail(DetailModel detail);
 

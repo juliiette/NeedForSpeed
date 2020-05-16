@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using AutoMapper;
 using Business.Models;
 using Business.Abstract;
 using Business.Abstract.Services;
+using Data.Abstract;
 
 namespace Business.Implementation.Services
 {
@@ -14,11 +17,18 @@ namespace Business.Implementation.Services
 
         private readonly IPlayerService _playerService;
 
-        public DetailService(CarModel car, PlayerModel player, IPlayerService playerService)
+        private readonly IUnitOfWork _unit;
+
+        private readonly IMapper _mapper;
+
+        public DetailService(CarModel car, PlayerModel player, IPlayerService playerService, IUnitOfWork unit, IMapper mapper)
         {
             _car = car;
             _player = player;
             _playerService = playerService;
+
+            _unit = unit;
+            _mapper = mapper;
         }
         
         
@@ -123,5 +133,22 @@ namespace Business.Implementation.Services
 
             return randDetail;
         }
+
+
+        public IEnumerable<DetailModel> GetAll()
+        {
+            var details = _unit.DetailRepository.GetAll();
+
+            return _mapper.Map<IEnumerable<DetailModel>>(details);
+        }
+
+        public IEnumerable<DetailModel> GetSpecial(DetailType type)
+        {
+            var specialDetails = GetAll().Where(d => d.DetailType == type);
+
+            return _mapper.Map<IEnumerable<DetailModel>>(specialDetails);
+        }
+        
+        
     }
 }

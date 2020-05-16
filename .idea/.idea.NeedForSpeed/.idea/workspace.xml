@@ -231,7 +231,7 @@
       <updated>1589032591681</updated>
       <workItem from="1589032593924" duration="8428000" />
       <workItem from="1589456522561" duration="4696000" />
-      <workItem from="1589554598427" duration="4703000" />
+      <workItem from="1589554598427" duration="5241000" />
     </task>
     <task id="LOCAL-00001" summary="Data Layer, Mapper">
       <created>1589461272083</created>
@@ -240,11 +240,18 @@
       <option name="project" value="LOCAL" />
       <updated>1589461272083</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Services changed">
+      <created>1589659933077</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589659933077</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17827000" />
+    <option name="totallyTimeSpent" value="18365000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -259,7 +266,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -274,8 +281,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Unit Tests" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32920793" />
-      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49928468" visible="true" weight="0.32920793" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="13" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.32920793" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.32920793" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -291,7 +298,8 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Data Layer, Mapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data Layer, Mapper" />
+    <MESSAGE value="Services changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Services changed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

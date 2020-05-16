@@ -5,6 +5,7 @@ using AutoMapper;
 using Business.Abstract.Services;
 using Business.Models;
 using Data.Abstract;
+using Data.Entity;
 
 namespace Business.Implementation.Services
 {
@@ -14,10 +15,6 @@ namespace Business.Implementation.Services
 
         private readonly IUnitOfWork _unit;
         
-        private readonly CarModel _car;
-
-        private readonly PlayerModel _player;
-
         private readonly IDetailService _detailService;
 
         private readonly List<DetailModel> _detailsUsed = new List<DetailModel>();
@@ -27,10 +24,8 @@ namespace Business.Implementation.Services
         private int _distance = 0;
 
         
-        public CarService(CarModel car, PlayerModel player, IDetailService detailService, IMapper mapper, IUnitOfWork unit)
+        public CarService(IDetailService detailService, IMapper mapper, IUnitOfWork unit)
         {
-            _car = car;
-            _player = player;
             _detailService = detailService;
 
             _mapper = mapper;
@@ -38,7 +33,7 @@ namespace Business.Implementation.Services
         }
 
 
-        public void Ride()
+        public void Ride(CarModel car, PlayerModel player)
         {
             _detail = _detailService.ChooseRandomDetail(_detailsUsed);
             Timer timer = new Timer();
@@ -52,12 +47,14 @@ namespace Business.Implementation.Services
 
                 timer.Start();
                 
-            } while (_car.CarRide);
+            } while (car.CarRide);
             
             timer.Stop();
             
-            CalculateIncome(_distance);
+            CalculateIncome(_distance, player, car);
             _distance = 0;
+            
+            UpdateEntity(car, player);
         }
 
         private void OnTimerEvent(Object source, System.Timers.ElapsedEventArgs e)
@@ -67,25 +64,39 @@ namespace Business.Implementation.Services
         }
 
         
-        public void CollectCar()
+        public void CollectCar(CarModel car, PlayerModel player)
         {
-            if (_car.Motor != null && _car.Battery != null && _car.Rim != null)
+            if (car.Motor != null && car.Battery != null && car.Rim != null)
             {
-                _car.CarRide = true;
-                _detailsUsed.Add(_car.Battery);
-                _detailsUsed.Add(_car.Motor);
-                _detailsUsed.Add(_car.Rim);
-                Ride();
+                car.CarRide = true;
+                _detailsUsed.Add(car.Battery);
+                _detailsUsed.Add(car.Motor);
+                _detailsUsed.Add(car.Rim);
+                Ride(car, player);
+                
+                UpdateEntity(car, player);
             }
         }
 
-        public void CalculateIncome(int distance)
+        public void CalculateIncome(int distance, PlayerModel player, CarModel car)
         {
-            _car.Distance += distance;
+            car.Distance += distance;
 
             int sum = distance * 3;
 
-            _player.Cash += sum;
+            player.Cash += sum;
+
+            UpdateEntity(car, player);
+
+        }
+
+        public void UpdateEntity(CarModel carModel, PlayerModel playerModel)
+        {
+            var carEntity = _mapper.Map<Car>(carModel);
+            var playerEntity = _mapper.Map<Player>(playerModel);
+            
+            _unit.CarRepository.Update(carEntity);
+            _unit.PlayerRepository.Update(playerEntity);
         }
     }
 }
