@@ -2,56 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c54c084-a7cf-4736-b4b6-76e628622d7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Business.Implementation/Mapper/MyAutoMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/Data.Abstract.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/IRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/obj/Data.Abstract.csproj.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/obj/Data.Abstract.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/obj/Data.Abstract.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/obj/Debug/netcoreapp3.0/Data.Abstract.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/obj/Debug/netcoreapp3.0/Data.Abstract.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/obj/Debug/netcoreapp3.0/Data.Abstract.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/obj/Debug/netcoreapp3.0/Data.Abstract.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Abstract/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/BaseEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/Car.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/Data.Entity.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/Detail.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/Player.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/obj/Data.Entity.csproj.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/obj/Data.Entity.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/obj/Data.Entity.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/obj/Debug/netcoreapp3.0/Data.Entity.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/obj/Debug/netcoreapp3.0/Data.Entity.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/obj/Debug/netcoreapp3.0/Data.Entity.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Entity/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/Data.Implementation.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/DataServices.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/NFSContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/Repository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/UnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/obj/Data.Implementation.csproj.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/obj/Data.Implementation.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/obj/Data.Implementation.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/obj/Debug/netcoreapp3.0/Data.Implementation.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/obj/Debug/netcoreapp3.0/Data.Implementation.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/obj/Debug/netcoreapp3.0/Data.Implementation.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/obj/Debug/netcoreapp3.1/Data.Implementation.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/obj/Debug/netcoreapp3.1/Data.Implementation.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/obj/Debug/netcoreapp3.1/Data.Implementation.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data.Implementation/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NeedForSpeed/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeedForSpeed/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NeedForSpeed/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeedForSpeed/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business.Implementation/Business.Implementation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Business.Implementation/Business.Implementation.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business.Implementation/obj/Business.Implementation.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Business.Implementation/obj/Business.Implementation.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business.Implementation/obj/Debug/netcoreapp3.1/Business.Implementation.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Business.Implementation/obj/Debug/netcoreapp3.1/Business.Implementation.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business.Implementation/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Business.Implementation/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business.Implementation/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Business.Implementation/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NeedForSpeed.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NeedForSpeed.sln" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +108,6 @@
     </navigator>
     <panes>
       <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -165,38 +115,12 @@
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="NeedForSpeed" type="24d0babc:SolutionExplorerModelNode" />
             </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NeedForSpeed" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Business.Abstract" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NeedForSpeed" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Business.Abstract" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NeedForSpeed" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Business.Implementation" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NeedForSpeed" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Business.Implementation" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NeedForSpeed" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Business.Models" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,6 +156,8 @@
       <workItem from="1589032593924" duration="8428000" />
       <workItem from="1589456522561" duration="4696000" />
       <workItem from="1589554598427" duration="5241000" />
+      <workItem from="1589660514493" duration="494000" />
+      <workItem from="1589661085975" duration="1643000" />
     </task>
     <task id="LOCAL-00001" summary="Data Layer, Mapper">
       <created>1589461272083</created>
@@ -247,11 +173,18 @@
       <option name="project" value="LOCAL" />
       <updated>1589659933077</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Services changed">
+      <created>1589660530452</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589660530452</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18365000" />
+    <option name="totallyTimeSpent" value="20502000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -266,7 +199,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -281,8 +214,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Unit Tests" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49928468" visible="true" weight="0.32920793" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="13" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.32920793" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49785408" weight="0.32920793" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50214595" side_tool="true" weight="0.32920793" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.32920793" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
