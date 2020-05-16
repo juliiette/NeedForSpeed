@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Implementation/Business.Implementation.csproj",
-    "projectName": "Business.Implementation",
-    "projectPath": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Implementation/Business.Implementation.csproj",
-    "outputPath": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Implementation/obj/",
+    "projectUniqueName": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Data.Implementation/Data.Implementation.csproj",
+    "projectName": "Data.Implementation",
+    "projectPath": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Data.Implementation/Data.Implementation.csproj",
+    "outputPath": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Data.Implementation/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
@@ -15,12 +15,6 @@
     "frameworks": {
       "netcoreapp3.1": {
         "projectReferences": {
-          "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Abstract/Business.Abstract.csproj": {
-            "projectPath": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Abstract/Business.Abstract.csproj"
-          },
-          "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Models/Business.Models.csproj": {
-            "projectPath": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Business.Models/Business.Models.csproj"
-          },
           "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Data.Abstract/Data.Abstract.csproj": {
             "projectPath": "/Users/juliastanko/Documents/university/trpz/NeedForSpeed/Data.Abstract/Data.Abstract.csproj"
           },
@@ -39,9 +33,29 @@
   "frameworks": {
     "netcoreapp3.1": {
       "dependencies": {
-        "AutoMapper": {
+        "Microsoft.EntityFrameworkCore": {
           "target": "Package",
-          "version": "[9.0.0, )"
+          "version": "[3.1.4, )"
+        },
+        "Microsoft.EntityFrameworkCore.Design": {
+          "target": "Package",
+          "version": "[3.1.4, )"
+        },
+        "Microsoft.EntityFrameworkCore.SqlServer": {
+          "target": "Package",
+          "version": "[3.1.4, )"
+        },
+        "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+          "target": "Package",
+          "version": "[1.1.6, )"
+        },
+        "Microsoft.EntityFrameworkCore.Tools": {
+          "target": "Package",
+          "version": "[3.1.4, )"
+        },
+        "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+          "target": "Package",
+          "version": "[2.0.3, )"
         }
       },
       "imports": [

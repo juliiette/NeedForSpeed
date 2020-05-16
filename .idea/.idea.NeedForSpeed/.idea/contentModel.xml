@@ -21,6 +21,9 @@
       <e p="Business.Implementation" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Business.Implementation.csproj" t="IncludeRecursive" />
+        <e p="Mapper" t="Include">
+          <e p="MyAutoMapper.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -31,6 +34,7 @@
         <e p="Services" t="Include">
           <e p="CarService.cs" t="Include" />
           <e p="DetailService.cs" t="Include" />
+          <e p="PlayerService.cs" t="Include" />
         </e>
       </e>
       <e p="Business.Models" t="IncludeRecursive">
@@ -46,6 +50,49 @@
           </e>
         </e>
         <e p="PlayerModel.cs" t="Include" />
+      </e>
+      <e p="Data.Abstract" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Data.Abstract.csproj" t="IncludeRecursive" />
+        <e p="IRepository.cs" t="Include" />
+        <e p="IUnitOfWork.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Data.Abstract.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Data.Entity" t="IncludeRecursive">
+        <e p="BaseEntity.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Car.cs" t="Include" />
+        <e p="Data.Entity.csproj" t="IncludeRecursive" />
+        <e p="Detail.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Data.Entity.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Player.cs" t="Include" />
+      </e>
+      <e p="Data.Implementation" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Data.Implementation.csproj" t="IncludeRecursive" />
+        <e p="DataServices.cs" t="Include" />
+        <e p="NFSContext.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Data.Implementation.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repository.cs" t="Include" />
+        <e p="UnitOfWork.cs" t="Include" />
       </e>
       <e p="NeedForSpeed.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
