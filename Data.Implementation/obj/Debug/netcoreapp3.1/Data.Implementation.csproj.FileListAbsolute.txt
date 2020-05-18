@@ -1,0 +1,17 @@
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\bin\Debug\netcoreapp3.1\Data.Implementation.deps.json
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\bin\Debug\netcoreapp3.1\Data.Implementation.runtimeconfig.json
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\bin\Debug\netcoreapp3.1\Data.Implementation.runtimeconfig.dev.json
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\bin\Debug\netcoreapp3.1\Data.Implementation.dll
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\bin\Debug\netcoreapp3.1\Data.Implementation.pdb
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\bin\Debug\netcoreapp3.1\Data.Abstract.dll
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\bin\Debug\netcoreapp3.1\Data.Entity.dll
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\bin\Debug\netcoreapp3.1\Data.Abstract.pdb
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\bin\Debug\netcoreapp3.1\Data.Entity.pdb
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\obj\Debug\netcoreapp3.1\Data.Implementation.csprojAssemblyReference.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\obj\Debug\netcoreapp3.1\Data.Implementation.csproj.CoreCompileInputs.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\obj\Debug\netcoreapp3.1\Data.Implementation.AssemblyInfoInputs.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\obj\Debug\netcoreapp3.1\Data.Implementation.AssemblyInfo.cs
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\obj\Debug\netcoreapp3.1\Data.Implementation.csproj.CopyComplete
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\obj\Debug\netcoreapp3.1\Data.Implementation.dll
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\obj\Debug\netcoreapp3.1\Data.Implementation.pdb
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Implementation\obj\Debug\netcoreapp3.1\Data.Implementation.genruntimeconfig.cache

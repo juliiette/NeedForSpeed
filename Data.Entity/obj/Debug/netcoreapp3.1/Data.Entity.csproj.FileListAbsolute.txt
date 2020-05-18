@@ -1,0 +1,9 @@
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Entity\bin\Debug\netcoreapp3.1\Data.Entity.deps.json
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Entity\bin\Debug\netcoreapp3.1\Data.Entity.dll
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Entity\bin\Debug\netcoreapp3.1\Data.Entity.pdb
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Entity\obj\Debug\netcoreapp3.1\Data.Entity.csprojAssemblyReference.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Entity\obj\Debug\netcoreapp3.1\Data.Entity.csproj.CoreCompileInputs.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Entity\obj\Debug\netcoreapp3.1\Data.Entity.AssemblyInfoInputs.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Entity\obj\Debug\netcoreapp3.1\Data.Entity.AssemblyInfo.cs
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Entity\obj\Debug\netcoreapp3.1\Data.Entity.dll
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Entity\obj\Debug\netcoreapp3.1\Data.Entity.pdb

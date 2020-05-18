@@ -1,0 +1,12 @@
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\bin\Debug\netcoreapp3.1\Data.Abstract.deps.json
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\bin\Debug\netcoreapp3.1\Data.Abstract.dll
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\bin\Debug\netcoreapp3.1\Data.Abstract.pdb
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\bin\Debug\netcoreapp3.1\Data.Entity.dll
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\bin\Debug\netcoreapp3.1\Data.Entity.pdb
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\obj\Debug\netcoreapp3.1\Data.Abstract.csprojAssemblyReference.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\obj\Debug\netcoreapp3.1\Data.Abstract.csproj.CoreCompileInputs.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\obj\Debug\netcoreapp3.1\Data.Abstract.AssemblyInfoInputs.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\obj\Debug\netcoreapp3.1\Data.Abstract.AssemblyInfo.cs
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\obj\Debug\netcoreapp3.1\Data.Abstract.csproj.CopyComplete
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\obj\Debug\netcoreapp3.1\Data.Abstract.dll
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Data.Abstract\obj\Debug\netcoreapp3.1\Data.Abstract.pdb

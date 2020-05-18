@@ -1,16 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business.Models", "Business.Models\Business.Models.csproj", "{043B3948-584F-4BED-92A2-319935E1CFA5}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business.Models", "Business.Models\Business.Models.csproj", "{043B3948-584F-4BED-92A2-319935E1CFA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business.Abstract", "Business.Abstract\Business.Abstract.csproj", "{3D0D5EE3-CFD7-4B62-A42B-4C1B96C7E673}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business.Abstract", "Business.Abstract\Business.Abstract.csproj", "{3D0D5EE3-CFD7-4B62-A42B-4C1B96C7E673}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business.Implementation", "Business.Implementation\Business.Implementation.csproj", "{919C1B8F-821C-435A-9573-5FBA5421E64C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business.Implementation", "Business.Implementation\Business.Implementation.csproj", "{919C1B8F-821C-435A-9573-5FBA5421E64C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Abstract", "Data.Abstract\Data.Abstract.csproj", "{ABA30EFA-BD08-4C1B-9A03-F34F8B5987E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Abstract", "Data.Abstract\Data.Abstract.csproj", "{ABA30EFA-BD08-4C1B-9A03-F34F8B5987E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Entity", "Data.Entity\Data.Entity.csproj", "{393566D6-60B0-4DBA-AC6A-A25BC7D341C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Entity", "Data.Entity\Data.Entity.csproj", "{393566D6-60B0-4DBA-AC6A-A25BC7D341C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Implementation", "Data.Implementation\Data.Implementation.csproj", "{F8FD6863-D0B9-4D01-9494-A0417532FB68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Implementation", "Data.Implementation\Data.Implementation.csproj", "{F8FD6863-D0B9-4D01-9494-A0417532FB68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "View", "View\View.csproj", "{462B81F3-DF80-4113-BBA1-A519008D4813}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModel", "ViewModels\ViewModel.csproj", "{93F08F59-A261-439F-BD9C-48D08CDCBD3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,5 +49,19 @@ Global
 		{F8FD6863-D0B9-4D01-9494-A0417532FB68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8FD6863-D0B9-4D01-9494-A0417532FB68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8FD6863-D0B9-4D01-9494-A0417532FB68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{462B81F3-DF80-4113-BBA1-A519008D4813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{462B81F3-DF80-4113-BBA1-A519008D4813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{462B81F3-DF80-4113-BBA1-A519008D4813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{462B81F3-DF80-4113-BBA1-A519008D4813}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93F08F59-A261-439F-BD9C-48D08CDCBD3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F08F59-A261-439F-BD9C-48D08CDCBD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F08F59-A261-439F-BD9C-48D08CDCBD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F08F59-A261-439F-BD9C-48D08CDCBD3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A7B0C5C-32AF-47CB-8C0F-30461131C27C}
 	EndGlobalSection
 EndGlobal

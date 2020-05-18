@@ -1,0 +1,17 @@
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\ViewModel\bin\Debug\netcoreapp3.1\ViewModel.deps.json
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\ViewModel\bin\Debug\netcoreapp3.1\ViewModel.dll
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\ViewModel\bin\Debug\netcoreapp3.1\ViewModel.pdb
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.csprojAssemblyReference.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.AssemblyInfoInputs.cache
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.AssemblyInfo.cs
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.dll
+C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.pdb
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModel\bin\Debug\netcoreapp3.1\Business.Abstract.dll
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModel\bin\Debug\netcoreapp3.1\Business.Models.dll
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModel\bin\Debug\netcoreapp3.1\Business.Abstract.pdb
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModel\bin\Debug\netcoreapp3.1\Business.Models.pdb
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModel\bin\Debug\netcoreapp3.1\Interop.Accessibility.dll
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModel\obj\Debug\netcoreapp3.1\Interop.Accessibility.dll
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.csproj.ResolveComReference.cache
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.csproj.CopyComplete
