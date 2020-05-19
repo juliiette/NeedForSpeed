@@ -1,0 +1,62 @@
+﻿<Window x:Class="View.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:View"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="10" Background="Pink" VerticalAlignment="Center"
+                       Text="DETAILS SHOP" FontWeight="Bold" FontSize="20" TextAlignment="Center" MinHeight="30"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="10" Text="Cash: " FontSize="18" TextAlignment="Left"></TextBlock>
+
+        <ListBox Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Margin="10 0 10 10"
+                     ItemsSource="{Binding Details}" SelectedItem="{Binding SelectedDetail}"
+                     ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="+" Background="White" BorderThickness="0" Height="30" Width="30"
+                                FontSize="18" VerticalContentAlignment="Top" VerticalAlignment="Center"
+                                Command="{Binding DataContext.AddDetailToCar, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}}"
+                                CommandParameter="{Binding}"/>
+                        <Expander Header="{Binding Name}" Padding="5" FontSize="15">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding DetailType}"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding CookingTime.Minutes}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding RetailCost}"/>
+                                        <TextBlock Text=" y.e."/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Stability}" FontSize="18"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </Expander>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Margin="10" Background="Pink" VerticalAlignment="Center"
+                       Text="MY CAR" FontWeight="Bold" FontSize="20" TextAlignment="Center" MinHeight="30"/>
+        <TextBlock Grid.Row="4" Grid.Column="1" Margin="10" Text="Income: " FontSize="18" TextAlignment="Left"/>
+    </Grid>
+</Window>

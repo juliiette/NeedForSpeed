@@ -15,9 +15,24 @@ namespace ViewModel
         private readonly ICarService _carService;
         private readonly IPlayerService _playerService;
 
-        public ObservableCollection<DetailModel> Motors { get; set; }
-        public ObservableCollection<DetailModel> Rims { get; set; }
-        public ObservableCollection<DetailModel> Batteries { get; set; }
+        //public ObservableCollection<DetailModel> Motors { get; set; }
+        //public ObservableCollection<DetailModel> Rims { get; set; }
+        //public ObservableCollection<DetailModel> Batteries { get; set; }
+        public ObservableCollection<DetailModel> Details { get; set; }
+        public ObservableCollection<DetailModel> Car { get; set; }
+
+        private CarModel car;
+
+        private DetailModel selectedDetail;
+        public DetailModel SelectedDetail
+        {
+            get { return selectedDetail; }
+            set { selectedDetail = value;
+                OnPropertyChanged(nameof(SelectedDetail));
+            }
+        }
+
+   
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
@@ -31,9 +46,11 @@ namespace ViewModel
             _carService = carService;
             _playerService = playerService;
 
-            Motors = new ObservableCollection<DetailModel>(detailService.GetSpecial(DetailType.Motor));
-            Rims = new ObservableCollection<DetailModel>(detailService.GetSpecial(DetailType.Rim));
-            Batteries = new ObservableCollection<DetailModel>(detailService.GetSpecial(DetailType.Battery));
+            Details = new ObservableCollection<DetailModel>(detailService.GetAll());
+            Car = new ObservableCollection<DetailModel>();
+            //Motors = new ObservableCollection<DetailModel>(detailService.GetSpecial(DetailType.Motor));
+            //Rims = new ObservableCollection<DetailModel>(detailService.GetSpecial(DetailType.Rim));
+            //Batteries = new ObservableCollection<DetailModel>(detailService.GetSpecial(DetailType.Battery));
 
         }
     }
