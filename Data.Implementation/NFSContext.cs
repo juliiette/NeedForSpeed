@@ -16,5 +16,56 @@ namespace Data.Implementation
         {
             Database.EnsureCreated();
         }
+
+        public NFSContext() : base () { }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            var connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=NFSDb;Trusted_Connection=True;";
+            optionsBuilder.UseSqlServer(connectionString);
+            base.OnConfiguring(optionsBuilder);
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder model)
+        {
+            base.OnModelCreating(model);
+            model.Entity<Detail>().ToTable("Details");
+
+            model.Entity<Detail>().HasData(
+                new Detail
+                {
+                    Name = "Basic motor",
+                    DetailType = DetailType.Motor,
+                    RetailCost = 230,
+                    RepairCost = 120,
+                    Stability = 0.6,
+                },
+                new Detail
+                {
+                    Name = "Avarege Motor MT-20",
+                    DetailType = DetailType.Motor,
+                    RetailCost = 290,
+                    RepairCost = 150,
+                    Stability = 0.72,
+                },
+                new Detail
+                {
+                    Name = "Gold Rim",
+                    DetailType = DetailType.Rim,
+                    RetailCost = 280,
+                    RepairCost = 200,
+                    Stability = 0.9,
+                },
+                new Detail
+                {
+                    Name = "Poor Battery YM-49",
+                    DetailType = DetailType.Battery,
+                    RetailCost = 80,
+                    RepairCost = 120,
+                    Stability = 0.5,
+                }
+                );
+        }
     }
 }

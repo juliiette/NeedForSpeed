@@ -21,3 +21,7 @@ C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\View\obj\Debug\netcoreapp3.1\
 C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\View\obj\Debug\netcoreapp3.1\View.dll
 C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\View\obj\Debug\netcoreapp3.1\View.pdb
 C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\View\obj\Debug\netcoreapp3.1\View.genruntimeconfig.cache
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\View\bin\Debug\netcoreapp3.1\Business.Abstract.dll
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\View\bin\Debug\netcoreapp3.1\Business.Models.dll
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\View\bin\Debug\netcoreapp3.1\Business.Abstract.pdb
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\View\bin\Debug\netcoreapp3.1\Business.Models.pdb

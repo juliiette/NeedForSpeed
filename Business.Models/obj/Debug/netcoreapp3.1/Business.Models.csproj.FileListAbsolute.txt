@@ -6,3 +6,4 @@ C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Business.Models\obj\Debug\net
 C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Business.Models\obj\Debug\netcoreapp3.1\Business.Models.AssemblyInfo.cs
 C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Business.Models\obj\Debug\netcoreapp3.1\Business.Models.dll
 C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Business.Models\obj\Debug\netcoreapp3.1\Business.Models.pdb
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\Business.Models\obj\Debug\netcoreapp3.1\Business.Models.csprojAssemblyReference.cache

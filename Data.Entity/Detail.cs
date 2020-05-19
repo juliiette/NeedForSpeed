@@ -13,7 +13,14 @@ namespace Data.Entity
         public double Stability { get; set; }
 
         public bool CanFunction { get; set; }
+
+        public Detail()
+        {
+            CanFunction = true;
+        }
     }
+
+
     
     public enum DetailType
     {

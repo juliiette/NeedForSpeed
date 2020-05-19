@@ -4,59 +4,53 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View"
-        xmlns:vm="clr-namespace:ViewModel;assembly=ViewModel" 
+        xmlns:vm="clr-namespace:ViewModel.MainWindowVModel;assembly=ViewModel" 
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
-    <Window.DataContext>
-        <vm:MainWindowVModel/>
-    </Window.DataContext>
+    
     <Grid>
         <ContentControl HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Height="414" Width="390" Background="DarkRed">
-            
+
             <TabControl>
                 <TabItem Header="Motor Shop">
                     <Grid Background="#FFE5E5E5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="25*"/>
-                            <ColumnDefinition Width="71*"/>
-                        </Grid.ColumnDefinitions>
-                        
-                        <DataGrid Margin="10,43,90,10" Name="motorDataGrid" ItemsSource="{Binding Source=Motor}" AutoGenerateColumns="False">
+
+                        <DataGrid Name="motorDataGrid" ItemsSource="{Binding Source=Motors}" AutoGenerateColumns="False">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Name" Width="200" Binding="{Binding Detail.Name}"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Cost" Width="144" Binding="{Binding Detail.RetailCost}"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Stability" Width="144" Binding="{Binding Detail.Stability}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Name" Width="160" Binding="{Binding Detail.Name}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Cost" Width="114" Binding="{Binding Detail.RetailCost}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Stability" Width="114" Binding="{Binding Detail.Stability}"></DataGridTextColumn>
                             </DataGrid.Columns>
                         </DataGrid>
                     </Grid>
                 </TabItem>
-                
+
                 <TabItem Header="Rim Shop">
                     <Grid Background="#FFE5E5E5">
-                        <DataGrid Margin="10,43,400,10" Name="rimDataGrid" ItemsSource="{Binding Source=Rim}" AutoGenerateColumns="False">
+                        <DataGrid Name="rimDataGrid" ItemsSource="{Binding Source=Rims}" AutoGenerateColumns="False">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Name" Width="200" Binding="{Binding Detail.Name}"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Cost" Width="144" Binding="{Binding Detail.RetailCost}"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Stability" Width="144" Binding="{Binding Detail.Stability}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Name" Width="160" Binding="{Binding Detail.Name}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Cost" Width="114" Binding="{Binding Detail.RetailCost}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Stability" Width="114" Binding="{Binding Detail.Stability}"></DataGridTextColumn>
                             </DataGrid.Columns>
                         </DataGrid>
                     </Grid>
                 </TabItem>
-                
+
                 <TabItem Header="Battery Shop">
                     <Grid Background="#FFE5E5E5">
-                        <DataGrid Margin="10,43,400,10" Name="batteryDataGrid" ItemsSource="{Binding Source=Motor}" AutoGenerateColumns="False">
+                        <DataGrid Name="batteryDataGrid" ItemsSource="{Binding Source=Motor}" AutoGenerateColumns="False">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Name" Width="200" Binding="{Binding Detail.Name}"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Cost" Width="144" Binding="{Binding Detail.RetailCost}"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Stability" Width="144" Binding="{Binding Detail.Stability}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Name" Width="160" Binding="{Binding Detail.Name}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Cost" Width="114" Binding="{Binding Detail.RetailCost}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Stability" Width="114" Binding="{Binding Detail.Stability}"></DataGridTextColumn>
                             </DataGrid.Columns>
                         </DataGrid>
                     </Grid>
                 </TabItem>
             </TabControl>
-            
+
         </ContentControl>
 
     </Grid>
