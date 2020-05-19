@@ -13,15 +13,13 @@ namespace ViewModel
 
         private readonly IDetailService _detailService;
         private readonly ICarService _carService;
-        private readonly IPlayerService _playerService;
 
-        //public ObservableCollection<DetailModel> Motors { get; set; }
-        //public ObservableCollection<DetailModel> Rims { get; set; }
-        //public ObservableCollection<DetailModel> Batteries { get; set; }
         public ObservableCollection<DetailModel> Details { get; set; }
         public ObservableCollection<DetailModel> Car { get; set; }
 
         private CarModel car;
+        private PlayerModel player;
+       
 
         private DetailModel selectedDetail;
         public DetailModel SelectedDetail
@@ -40,18 +38,21 @@ namespace ViewModel
         }
 
 
-        public MainWindowVModel(IDetailService detailService, ICarService carService, IPlayerService playerService)
+        public MainWindowVModel(IDetailService detailService, ICarService carService)
         {
             _detailService = detailService;
             _carService = carService;
-            _playerService = playerService;
 
             Details = new ObservableCollection<DetailModel>(detailService.GetAll());
             Car = new ObservableCollection<DetailModel>();
-            //Motors = new ObservableCollection<DetailModel>(detailService.GetSpecial(DetailType.Motor));
-            //Rims = new ObservableCollection<DetailModel>(detailService.GetSpecial(DetailType.Rim));
-            //Batteries = new ObservableCollection<DetailModel>(detailService.GetSpecial(DetailType.Battery));
+            
+            player = new PlayerModel();
+            player.Name = "Garik";
+            player.Car = car;
+            player.Cash = 1000;
 
         }
+
+
     }
 }

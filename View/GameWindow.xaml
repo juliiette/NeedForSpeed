@@ -58,5 +58,6 @@
         <TextBlock Grid.Row="0" Grid.Column="1" Margin="10" Background="Pink" VerticalAlignment="Center"
                        Text="MY CAR" FontWeight="Bold" FontSize="20" TextAlignment="Center" MinHeight="30"/>
         <TextBlock Grid.Row="4" Grid.Column="1" Margin="10" Text="Income: " FontSize="18" TextAlignment="Left"/>
+        <TextBlock Text="{Binding Player.Cash}" HorizontalAlignment="Left" Margin="58,10,0,0" Grid.Row="4" Grid.Column="0"  TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
     </Grid>
 </Window>

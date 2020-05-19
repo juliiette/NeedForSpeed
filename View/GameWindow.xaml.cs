@@ -9,17 +9,21 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ViewModel;
+using Business.Abstract;
+using Business.Abstract.Services;
 
 namespace View
 {
-    /// <summary>
-    /// Interaction logic for GameWindow.xaml
-    /// </summary>
     public partial class GameWindow : Window
     {
+
         public GameWindow()
         {
             InitializeComponent();
+
+
+            DataContext = App.DependencyResolver.GetService(typeof(MainWindowVModel));
         }
     }
 }

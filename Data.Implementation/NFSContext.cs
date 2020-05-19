@@ -35,6 +35,7 @@ namespace Data.Implementation
             model.Entity<Detail>().HasData(
                 new Detail
                 {
+                    Id = 12,
                     Name = "Basic motor",
                     DetailType = DetailType.Motor,
                     RetailCost = 230,
@@ -43,6 +44,7 @@ namespace Data.Implementation
                 },
                 new Detail
                 {
+                    Id = 223,
                     Name = "Avarege Motor MT-20",
                     DetailType = DetailType.Motor,
                     RetailCost = 290,
@@ -51,6 +53,7 @@ namespace Data.Implementation
                 },
                 new Detail
                 {
+                    Id = 32,
                     Name = "Gold Rim",
                     DetailType = DetailType.Rim,
                     RetailCost = 280,
@@ -59,6 +62,7 @@ namespace Data.Implementation
                 },
                 new Detail
                 {
+                    Id = 5,
                     Name = "Poor Battery YM-49",
                     DetailType = DetailType.Battery,
                     RetailCost = 80,
