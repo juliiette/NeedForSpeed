@@ -6,7 +6,7 @@ namespace Business.Models
 
         public string Name { get; set; }
         
-        public DetailType DetailType { get; set; }
+        public DetailTypeModel DetailType { get; set; }
         
         public int RetailCost { get; set; }
 
@@ -18,7 +18,7 @@ namespace Business.Models
         
     }
 
-    public enum DetailType
+    public enum DetailTypeModel
     {
         Motor,
         Rim,

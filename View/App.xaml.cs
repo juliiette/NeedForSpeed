@@ -5,10 +5,10 @@ using System.Windows;
 using Data.Implementation;
 using Microsoft.EntityFrameworkCore;
 using Business.Implementation.Mapper;
-using Business.Implementation;
 using AutoMapper;
 using Business.Abstract.Services;
 using Business.Implementation.Services;
+using ViewModel;
 
 namespace View
 {
@@ -34,12 +34,16 @@ namespace View
             services.AddTransient<IDetailService, DetailService>();
             services.AddTransient<ICarService, CarService>();
             services.AddTransient<IPlayerService, PlayerService>();
+            services.AddTransient<MainWindowVModel, MainWindowVModel>();
+
+            DataServices.ConfigureServices(services);
 
             DependencyResolver = services.BuildServiceProvider();
+
         }
 
      
         public static IServiceProvider DependencyResolver { get; private set; }
-    
+   
     }
 }

@@ -59,5 +59,6 @@
                        Text="MY CAR" FontWeight="Bold" FontSize="20" TextAlignment="Center" MinHeight="30"/>
         <TextBlock Grid.Row="4" Grid.Column="1" Margin="10" Text="Income: " FontSize="18" TextAlignment="Left"/>
         <TextBlock Text="{Binding Player.Cash}" HorizontalAlignment="Left" Margin="58,10,0,0" Grid.Row="4" Grid.Column="0"  TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <Button Content="Ride" HorizontalAlignment="Left" Margin="297,7,0,0" Grid.Row="4" VerticalAlignment="Top" Height="31" Width="93"/>
     </Grid>
 </Window>

@@ -10,6 +10,8 @@ namespace Business.Implementation.Mapper
         {
             CreateMap<Detail, DetailModel>().ReverseMap();
 
+            CreateMap<DetailType, DetailTypeModel>().ReverseMap();
+
             CreateMap<Car, CarModel>().ReverseMap();
 
             CreateMap<Player, PlayerModel>().ReverseMap();

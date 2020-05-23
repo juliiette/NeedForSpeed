@@ -3,7 +3,6 @@ using AutoMapper;
 using Business.Abstract.Services;
 using Business.Models;
 using Data.Abstract;
-using Data.Entity;
 
 namespace Business.Implementation.Services
 {

@@ -1,8 +1,7 @@
 namespace Data.Entity
 {
-    public class Player
+    public class Player : BaseEntity
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         
         public Car Car { get; set; }

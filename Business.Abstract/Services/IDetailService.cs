@@ -8,15 +8,15 @@ namespace Business.Abstract.Services
     {
         IEnumerable<DetailModel> GetAll();
 
-        IEnumerable<DetailModel> GetSpecial(DetailType type);
+        IEnumerable<DetailModel> GetSpecial(DetailTypeModel type);
         
-        void BuyDetail(DetailModel detail);
+        void BuyDetail(DetailModel detail, CarModel car, PlayerModel player);
 
-        void SellDetail(DetailModel detail);
+        void SellDetail(DetailModel detail, CarModel car, PlayerModel player);
 
-        void CrashDetail(DetailModel detail);
+        void CrashDetail(DetailModel detail, CarModel car);
 
-        void RepairDetail(DetailModel detail);
+        void RepairDetail(DetailModel detail, CarModel car, PlayerModel player);
 
         DetailModel ChooseRandomDetail(List<DetailModel> detailsUsed);
     }

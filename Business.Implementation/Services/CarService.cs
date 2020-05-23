@@ -23,6 +23,8 @@ namespace Business.Implementation.Services
 
         private int _distance = 0;
 
+        private CarModel _car;
+
         
         public CarService(IDetailService detailService, IMapper mapper, IUnitOfWork unit)
         {
@@ -35,6 +37,7 @@ namespace Business.Implementation.Services
 
         public void Ride(CarModel car, PlayerModel player)
         {
+            _car = car;
             _detail = _detailService.ChooseRandomDetail(_detailsUsed);
             Timer timer = new Timer();
             timer.Interval = 2000;
@@ -59,7 +62,7 @@ namespace Business.Implementation.Services
 
         private void OnTimerEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
-            _detailService.CrashDetail(_detail);
+            _detailService.CrashDetail(_detail, _car);
             _distance += 100;
         }
 
