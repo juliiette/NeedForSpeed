@@ -1,19 +1,21 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using System;
 using System.Configuration;
 using System.Windows;
-using Data.Implementation;
-using Microsoft.EntityFrameworkCore;
-using Business.Implementation.Mapper;
 using AutoMapper;
 using Business.Abstract.Services;
+using Business.Implementation.Mapper;
 using Business.Implementation.Services;
+using Data.Implementation;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using ViewModel;
 
 namespace View
 {
     public partial class App : Application
     {
+        public static IServiceProvider DependencyResolver { get; private set; }
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -23,10 +25,7 @@ namespace View
             var connectionString = ConfigurationManager.ConnectionStrings["NeedForSpeedConnection"].ConnectionString;
             services.AddDbContext<NFSContext>(opt => opt.UseSqlServer(connectionString));
 
-            var mapperConfig = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile(new MyAutoMapper());
-            });
+            var mapperConfig = new MapperConfiguration(cfg => { cfg.AddProfile(new MyAutoMapper()); });
 
             var mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
@@ -39,11 +38,6 @@ namespace View
             DataServices.ConfigureServices(services);
 
             DependencyResolver = services.BuildServiceProvider();
-
         }
-
-     
-        public static IServiceProvider DependencyResolver { get; private set; }
-   
     }
 }

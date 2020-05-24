@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Timers;
 using AutoMapper;
@@ -11,21 +10,20 @@ namespace Business.Implementation.Services
 {
     public class CarService : ICarService
     {
-        private readonly IMapper _mapper;
-
-        private readonly IUnitOfWork _unit;
-        
         private readonly IDetailService _detailService;
 
         private readonly List<DetailModel> _detailsUsed = new List<DetailModel>();
+        private readonly IMapper _mapper;
 
-        private DetailModel _detail = new DetailModel();
-
-        private int _distance = 0;
+        private readonly IUnitOfWork _unit;
 
         private CarModel _car;
 
-        
+        private DetailModel _detail = new DetailModel();
+
+        private int _distance;
+
+
         public CarService(IDetailService detailService, IMapper mapper, IUnitOfWork unit)
         {
             _detailService = detailService;
@@ -39,34 +37,27 @@ namespace Business.Implementation.Services
         {
             _car = car;
             _detail = _detailService.ChooseRandomDetail(_detailsUsed);
-            Timer timer = new Timer();
+            var timer = new Timer();
             timer.Interval = 2000;
             timer.Elapsed += OnTimerEvent;
-            timer.AutoReset = true;                
-            
+            timer.AutoReset = true;
+
             do
             {
                 timer.Enabled = true;
 
                 timer.Start();
-                
             } while (car.CanRide);
-            
+
             timer.Stop();
-            
+
             CalculateIncome(_distance, player, car);
             _distance = 0;
-            
+
             UpdateEntity(car, player);
         }
 
-        private void OnTimerEvent(Object source, System.Timers.ElapsedEventArgs e)
-        {
-            _detailService.CrashDetail(_detail, _car);
-            _distance += 100;
-        }
 
-        
         public void CollectCar(CarModel car, PlayerModel player)
         {
             if (car.Motor != null && car.Battery != null && car.Rim != null)
@@ -76,7 +67,7 @@ namespace Business.Implementation.Services
                 _detailsUsed.Add(car.Motor);
                 _detailsUsed.Add(car.Rim);
                 Ride(car, player);
-                
+
                 UpdateEntity(car, player);
             }
         }
@@ -85,21 +76,26 @@ namespace Business.Implementation.Services
         {
             car.Distance += distance;
 
-            int sum = distance * 3;
+            var sum = distance * 3;
 
             player.Cash += sum;
 
             UpdateEntity(car, player);
-
         }
 
         public void UpdateEntity(CarModel carModel, PlayerModel playerModel)
         {
             var carEntity = _mapper.Map<Car>(carModel);
             var playerEntity = _mapper.Map<Player>(playerModel);
-            
+
             _unit.CarRepository.Update(carEntity);
             _unit.PlayerRepository.Update(playerEntity);
+        }
+
+        private void OnTimerEvent(object source, ElapsedEventArgs e)
+        {
+            _detailService.CrashDetail(_detail, _car);
+            _distance += 100;
         }
     }
 }

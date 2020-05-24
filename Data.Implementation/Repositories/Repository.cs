@@ -9,7 +9,7 @@ namespace Data.Implementation
     {
         private readonly NFSContext _context;
 
-        private DbSet<TEntity> _dbSet;
+        private readonly DbSet<TEntity> _dbSet;
 
         public Repository(NFSContext context)
         {

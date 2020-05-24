@@ -1,30 +1,30 @@
-using Microsoft.EntityFrameworkCore;
 using Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Data.Implementation
 {
     public class NFSContext : DbContext
     {
-        public DbSet<Detail> Details { get; set; }
-        
-        public DbSet<Car> Cars { get; set; }
-        
-        public DbSet<Player> Players { get; set; }
-
-        
         public NFSContext(DbContextOptions<NFSContext> options)
         {
             Database.EnsureCreated();
         }
 
-        public NFSContext() : base () { }
+        public NFSContext()
+        {
+        }
+
+        public DbSet<Detail> Details { get; set; }
+
+        public DbSet<Car> Cars { get; set; }
+
+        public DbSet<Player> Players { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=NFSDb;Trusted_Connection=True;";
             optionsBuilder.UseSqlServer(connectionString);
             base.OnConfiguring(optionsBuilder);
-
         }
 
         protected override void OnModelCreating(ModelBuilder model)
@@ -40,7 +40,7 @@ namespace Data.Implementation
                     DetailType = DetailType.Motor,
                     RetailCost = 230,
                     RepairCost = 120,
-                    Stability = 0.6,
+                    Stability = 0.6
                 },
                 new Detail
                 {
@@ -49,7 +49,7 @@ namespace Data.Implementation
                     DetailType = DetailType.Motor,
                     RetailCost = 290,
                     RepairCost = 150,
-                    Stability = 0.72,
+                    Stability = 0.72
                 },
                 new Detail
                 {
@@ -58,7 +58,7 @@ namespace Data.Implementation
                     DetailType = DetailType.Rim,
                     RetailCost = 280,
                     RepairCost = 200,
-                    Stability = 0.9,
+                    Stability = 0.9
                 },
                 new Detail
                 {
@@ -67,9 +67,9 @@ namespace Data.Implementation
                     DetailType = DetailType.Battery,
                     RetailCost = 80,
                     RepairCost = 120,
-                    Stability = 0.5,
+                    Stability = 0.5
                 }
-                );
+            );
         }
     }
 }

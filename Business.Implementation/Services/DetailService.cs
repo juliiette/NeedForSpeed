@@ -2,22 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using Business.Models;
-using Business.Abstract;
 using Business.Abstract.Services;
+using Business.Models;
 using Data.Abstract;
-using Data.Entity;
 
 namespace Business.Implementation.Services
 {
     public class DetailService : IDetailService
     {
+        private readonly IMapper _mapper;
 
         private readonly IPlayerService _playerService;
 
         private readonly IUnitOfWork _unit;
-
-        private readonly IMapper _mapper;
 
         public DetailService(IPlayerService playerService, IUnitOfWork unit, IMapper mapper)
         {
@@ -26,8 +23,8 @@ namespace Business.Implementation.Services
             _unit = unit;
             _mapper = mapper;
         }
-        
-        
+
+
         public void BuyDetail(DetailModel detail, CarModel car, PlayerModel player)
         {
             if (_playerService.CheckCash(player, detail.RetailCost))
@@ -37,11 +34,11 @@ namespace Business.Implementation.Services
                     case DetailTypeModel.Battery:
                         car.Battery = detail;
                         break;
-                    
+
                     case DetailTypeModel.Motor:
                         car.Motor = detail;
                         break;
-                    
+
                     case DetailTypeModel.Rim:
                         car.Rim = detail;
                         break;
@@ -49,10 +46,11 @@ namespace Business.Implementation.Services
 
                 player.Cash -= detail.RetailCost;
             }
+
             // do exception
         }
 
-        
+
         public void SellDetail(DetailModel detail, CarModel car, PlayerModel player)
         {
             switch (detail.DetailType)
@@ -60,11 +58,11 @@ namespace Business.Implementation.Services
                 case DetailTypeModel.Battery:
                     car.Battery = null;
                     break;
-                    
+
                 case DetailTypeModel.Motor:
                     car.Motor = null;
                     break;
-                    
+
                 case DetailTypeModel.Rim:
                     car.Rim = null;
                     break;
@@ -73,7 +71,7 @@ namespace Business.Implementation.Services
             player.Cash += detail.RepairCost;
         }
 
-        
+
         public void CrashDetail(DetailModel detail, CarModel car)
         {
             if (detail.Stability <= 0.2)
@@ -85,8 +83,8 @@ namespace Business.Implementation.Services
             {
                 var random = new Random();
 
-                double propability = 1 - detail.Stability;
-                
+                var propability = 1 - detail.Stability;
+
                 if (random.NextDouble() < propability)
                 {
                     detail.CanFunction = false;
@@ -95,7 +93,7 @@ namespace Business.Implementation.Services
             }
         }
 
-        
+
         public void RepairDetail(DetailModel detail, CarModel car, PlayerModel player)
         {
             if (detail.Stability <= 0.2)
@@ -107,14 +105,14 @@ namespace Business.Implementation.Services
             {
                 if (_playerService.CheckCash(player, detail.RepairCost))
                 {
-                    double coef = (1 - detail.Stability) / 4;
-                
+                    var coef = (1 - detail.Stability) / 4;
+
                     detail.Stability = detail.Stability - coef;
-                
+
                     player.Cash -= detail.RepairCost;
-                
+
                     detail.RepairCost = detail.RepairCost + 20;
-                
+
                     detail.CanFunction = true;
                 }
             }
@@ -140,9 +138,9 @@ namespace Business.Implementation.Services
 
         public IEnumerable<DetailModel> GetSpecial(DetailTypeModel type)
         {
-            var specialDetails = GetAll().Where((Func<DetailModel, bool>)(d => d.DetailType == type));
+            var specialDetails = GetAll().Where(d => d.DetailType == type);
 
             return _mapper.Map<IEnumerable<DetailModel>>(specialDetails);
-        }  
+        }
     }
 }

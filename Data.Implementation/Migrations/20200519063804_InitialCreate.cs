@@ -7,8 +7,8 @@ namespace Data.Implementation.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Details",
-                columns: table => new
+                "Details",
+                table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
@@ -19,14 +19,11 @@ namespace Data.Implementation.Migrations
                     Stability = table.Column<double>(nullable: false),
                     CanFunction = table.Column<bool>(nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Details", x => x.Id);
-                });
+                constraints: table => { table.PrimaryKey("PK_Details", x => x.Id); });
 
             migrationBuilder.CreateTable(
-                name: "Cars",
-                columns: table => new
+                "Cars",
+                table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
@@ -40,28 +37,28 @@ namespace Data.Implementation.Migrations
                 {
                     table.PrimaryKey("PK_Cars", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Cars_Details_BatteryId",
-                        column: x => x.BatteryId,
-                        principalTable: "Details",
-                        principalColumn: "Id",
+                        "FK_Cars_Details_BatteryId",
+                        x => x.BatteryId,
+                        "Details",
+                        "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Cars_Details_MotorId",
-                        column: x => x.MotorId,
-                        principalTable: "Details",
-                        principalColumn: "Id",
+                        "FK_Cars_Details_MotorId",
+                        x => x.MotorId,
+                        "Details",
+                        "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Cars_Details_RimId",
-                        column: x => x.RimId,
-                        principalTable: "Details",
-                        principalColumn: "Id",
+                        "FK_Cars_Details_RimId",
+                        x => x.RimId,
+                        "Details",
+                        "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Players",
-                columns: table => new
+                "Players",
+                table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
@@ -73,55 +70,55 @@ namespace Data.Implementation.Migrations
                 {
                     table.PrimaryKey("PK_Players", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Players_Cars_CarId",
-                        column: x => x.CarId,
-                        principalTable: "Cars",
-                        principalColumn: "Id",
+                        "FK_Players_Cars_CarId",
+                        x => x.CarId,
+                        "Cars",
+                        "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.InsertData(
-                table: "Details",
-                columns: new[] { "Id", "CanFunction", "DetailType", "Name", "RepairCost", "RetailCost", "Stability" },
-                values: new object[,]
+                "Details",
+                new[] {"Id", "CanFunction", "DetailType", "Name", "RepairCost", "RetailCost", "Stability"},
+                new object[,]
                 {
-                    { 12, true, 0, "Basic motor", 120, 230, 0.59999999999999998 },
-                    { 223, true, 0, "Avarege Motor MT-20", 150, 290, 0.71999999999999997 },
-                    { 32, true, 1, "Gold Rim", 200, 280, 0.90000000000000002 },
-                    { 5, true, 2, "Poor Battery YM-49", 120, 80, 0.5 }
+                    {12, true, 0, "Basic motor", 120, 230, 0.59999999999999998},
+                    {223, true, 0, "Avarege Motor MT-20", 150, 290, 0.71999999999999997},
+                    {32, true, 1, "Gold Rim", 200, 280, 0.90000000000000002},
+                    {5, true, 2, "Poor Battery YM-49", 120, 80, 0.5}
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cars_BatteryId",
-                table: "Cars",
-                column: "BatteryId");
+                "IX_Cars_BatteryId",
+                "Cars",
+                "BatteryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cars_MotorId",
-                table: "Cars",
-                column: "MotorId");
+                "IX_Cars_MotorId",
+                "Cars",
+                "MotorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cars_RimId",
-                table: "Cars",
-                column: "RimId");
+                "IX_Cars_RimId",
+                "Cars",
+                "RimId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Players_CarId",
-                table: "Players",
-                column: "CarId");
+                "IX_Players_CarId",
+                "Players",
+                "CarId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Players");
+                "Players");
 
             migrationBuilder.DropTable(
-                name: "Cars");
+                "Cars");
 
             migrationBuilder.DropTable(
-                name: "Details");
+                "Details");
         }
     }
 }

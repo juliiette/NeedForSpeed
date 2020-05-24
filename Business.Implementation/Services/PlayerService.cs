@@ -8,19 +8,18 @@ namespace Business.Implementation.Services
 {
     public class PlayerService : IPlayerService
     {
-        private readonly IUnitOfWork _unit;
-
         private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unit;
 
         public PlayerService(IUnitOfWork unit, IMapper mapper)
         {
             _unit = unit;
             _mapper = mapper;
         }
-        
+
         public bool CheckCash(PlayerModel playerModel, int sum)
         {
-            bool isEnough = playerModel.Cash > sum;
+            var isEnough = playerModel.Cash > sum;
 
             return isEnough;
         }

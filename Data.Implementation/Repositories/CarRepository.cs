@@ -1,10 +1,10 @@
-﻿using Data.Entity;
-using Data.Abstract;
+﻿using Data.Abstract;
+using Data.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Implementation.Repositories
 {
-    class CarRepository : Repository<Car>, ICarRepository
+    internal class CarRepository : Repository<Car>, ICarRepository
     {
         private readonly NFSContext _context;
 

@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using System.Security.Policy;
 using Business.Abstract.Services;
 using Business.Models;
 
@@ -9,16 +8,14 @@ namespace ViewModel
 {
     public class MainWindowVModel : INotifyPropertyChanging
     {
-        private readonly IDetailService _detailService;
         private readonly ICarService _carService;
+        private readonly IDetailService _detailService;
         private readonly IPlayerService _playerService;
-
-        private CarModel Car { get; set; }
+        private RelayCommand _addDetailToCar;
         private PlayerModel _player;
 
         private DetailModel _selectedDetail;
-        private RelayCommand _addDetailToCar;
-        
+
         public MainWindowVModel(IDetailService detailService, ICarService carService, IPlayerService playerService)
         {
             _detailService = detailService;
@@ -33,8 +30,7 @@ namespace ViewModel
             Player = new PlayerModel {Name = "Garik", Car = Car, Cash = 1000};
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        public event PropertyChangingEventHandler PropertyChanging;
+        private CarModel Car { get; }
         public ObservableCollection<DetailModel> Details { get; set; }
         public ObservableCollection<DetailModel> CarDetailsList { get; set; }
 
@@ -65,16 +61,19 @@ namespace ViewModel
             CarDetailsList.Add(SelectedDetail);
         }, o => CheckCash(SelectedDetail));
 
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         private bool CheckCash(DetailModel detailModel)
         {
             return _playerService.CheckCash(Player, detailModel.RetailCost);
         }
-        
+
 
         private void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
     }
 }

@@ -2,10 +2,15 @@ namespace Data.Entity
 {
     public class Detail : BaseEntity
     {
+        public Detail()
+        {
+            CanFunction = true;
+        }
+
         public string Name { get; set; }
 
         public DetailType DetailType { get; set; }
-        
+
         public int RetailCost { get; set; }
 
         public int RepairCost { get; set; }
@@ -13,17 +18,13 @@ namespace Data.Entity
         public double Stability { get; set; }
 
         public bool CanFunction { get; set; }
-
-        public Detail()
-        {
-            CanFunction = true;
-        }
     }
 
 
-    
     public enum DetailType
     {
-        Motor, Rim, Battery
+        Motor,
+        Rim,
+        Battery
     }
 }

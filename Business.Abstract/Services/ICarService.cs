@@ -1,11 +1,9 @@
-using System;
 using Business.Models;
 
 namespace Business.Abstract.Services
 {
     public interface ICarService
     {
-
         void Ride(CarModel carModel, PlayerModel playerModel);
 
         void CollectCar(CarModel carModel, PlayerModel playerModel);

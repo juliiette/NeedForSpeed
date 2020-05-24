@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.Implementation.Repositories
 {
-    class PlayerRepository : Repository<Player>, IPlayerRepository
+    internal class PlayerRepository : Repository<Player>, IPlayerRepository
     {
         private readonly NFSContext _context;
 

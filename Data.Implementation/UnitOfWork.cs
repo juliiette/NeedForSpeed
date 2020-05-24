@@ -5,15 +5,9 @@ namespace Data.Implementation
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private NFSContext _context;
-        
-        public IRepository<Detail> DetailRepository { get; }
-        
-        public IRepository<Car> CarRepository { get; }
-        
-        public IRepository<Player> PlayerRepository { get; }
+        private readonly NFSContext _context;
 
-        
+
         public UnitOfWork(IRepository<Detail> detailRepository, IRepository<Car> carRepository,
             IRepository<Player> playerRepository, NFSContext context)
         {
@@ -25,8 +19,14 @@ namespace Data.Implementation
 
             PlayerRepository = playerRepository;
         }
-        
-        
+
+        public IRepository<Detail> DetailRepository { get; }
+
+        public IRepository<Car> CarRepository { get; }
+
+        public IRepository<Player> PlayerRepository { get; }
+
+
         public void Save()
         {
             _context.SaveChanges();

@@ -1,7 +1,6 @@
-using Microsoft.Extensions.DependencyInjection;
 using Data.Abstract;
-using Data.Entity;
 using Data.Implementation.Repositories;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Data.Implementation
 {

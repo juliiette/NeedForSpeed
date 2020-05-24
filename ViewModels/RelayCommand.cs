@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 
 namespace ViewModel
 {
     public class RelayCommand : ICommand
     {
-        private Action<object> _execute;
-        private Func<object, bool> _canExecute;
-
-        public event EventHandler CanExecuteChanged;
+        private readonly Func<object, bool> _canExecute;
+        private readonly Action<object> _execute;
 
         public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
@@ -18,11 +14,7 @@ namespace ViewModel
             _canExecute = canExecute;
         }
 
-        public event EventHandler CanExecutedChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
+        public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter)
         {
@@ -32,6 +24,12 @@ namespace ViewModel
         public void Execute(object parameter)
         {
             _execute.Invoke(parameter);
+        }
+
+        public event EventHandler CanExecutedChanged
+        {
+            add => CommandManager.RequerySuggested += value;
+            remove => CommandManager.RequerySuggested -= value;
         }
     }
 }
