@@ -1,41 +1,42 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Security.Policy;
 using Business.Abstract.Services;
 using Business.Models;
 
 namespace ViewModel
 {
-    public partial class MainWindowVModel : INotifyPropertyChanging
+    public class MainWindowVModel : INotifyPropertyChanging
     {
         private readonly IDetailService _detailService;
         private readonly ICarService _carService;
-     
-        private CarModel _car;
+        private readonly IPlayerService _playerService;
+
+        private CarModel Car { get; set; }
         private PlayerModel _player;
 
         private DetailModel _selectedDetail;
-        private DetailModel _addDetailToCar;
+        private RelayCommand _addDetailToCar;
         
-        public MainWindowVModel(IDetailService detailService, ICarService carService)
+        public MainWindowVModel(IDetailService detailService, ICarService carService, IPlayerService playerService)
         {
             _detailService = detailService;
             _carService = carService;
+            _playerService = playerService;
 
             Details = new ObservableCollection<DetailModel>(detailService.GetAll());
-            Car = new ObservableCollection<DetailModel>();
+            CarDetailsList = new ObservableCollection<DetailModel>();
+            SelectedDetail = Details.FirstOrDefault();
 
-            var player = new PlayerModel();
-            player.Name = "Garik";
-            player.Car = _car;
-            player.Cash = 1000;
-            Player = player;
+            Car = new CarModel();
+            Player = new PlayerModel {Name = "Garik", Car = Car, Cash = 1000};
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public event PropertyChangingEventHandler PropertyChanging;
         public ObservableCollection<DetailModel> Details { get; set; }
-        public ObservableCollection<DetailModel> Car { get; set; }
+        public ObservableCollection<DetailModel> CarDetailsList { get; set; }
 
         public PlayerModel Player
         {
@@ -58,24 +59,19 @@ namespace ViewModel
         }
 
 
-
-        public DetailModel AddDetailToCar
+        public RelayCommand AddDetailToCar => _addDetailToCar ??= new RelayCommand(o =>
         {
-            get => _selectedDetail;
-            set
-            {
-                _addDetailToCar = value;
-                OnPropertyChanged(nameof(AddDetailToCar));
-                _detailService.BuyDetail(_addDetailToCar, _car, _player);
-                Car.Add(_addDetailToCar);
-            }
+            _detailService.BuyDetail(SelectedDetail, Car, Player);
+            CarDetailsList.Add(SelectedDetail);
+        }, o => CheckCash(SelectedDetail));
+
+        private bool CheckCash(DetailModel detailModel)
+        {
+            return _playerService.CheckCash(Player, detailModel.RetailCost);
         }
         
 
-        
-        
-        
-        protected virtual void OnPropertyChanged(string propertyName)
+        private void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

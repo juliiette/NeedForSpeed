@@ -37,8 +37,8 @@
                     <StackPanel Orientation="Horizontal">
                         <Button Content="+" Background="White" BorderThickness="0" Height="30" Width="30"
                                 FontSize="18" VerticalContentAlignment="Top" VerticalAlignment="Center"
-                                Command="{Binding DataContext.AddDetailToCar, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}}"
-                                CommandParameter="{Binding}"/>
+                                Command="{Binding DataContext.AddDetailToCar, 
+                                RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>
                         <Expander Header="{Binding Name}" Padding="5" FontSize="15">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                 <StackPanel>
@@ -66,7 +66,7 @@
     
         <!--листбокс деталей машины-->
         <ListBox Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Margin="10 0 10 10"
-                 ItemsSource="{Binding Car}">
+                 ItemsSource="{Binding CarDetailsList}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">

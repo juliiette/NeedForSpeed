@@ -12,7 +12,7 @@ namespace ViewModel
 
         public event EventHandler CanExecuteChanged;
 
-        public RelayCommand(Action<object> execute, Func<object, bool> canExecute)
+        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
             _execute = execute;
             _canExecute = canExecute;
