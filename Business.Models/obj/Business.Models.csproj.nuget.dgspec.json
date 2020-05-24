@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj": {}
+    "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj": {
+    "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj",
+        "projectUniqueName": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj",
         "projectName": "Business.Models",
-        "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj",
+        "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj",
         "packagesPath": "C:\\Users\\stnkj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Models\\obj\\",
+        "outputPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\stnkj\\AppData\\Roaming\\NuGet\\NuGet.Config",

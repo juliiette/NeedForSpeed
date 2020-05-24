@@ -869,11 +869,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Implementation\\Business.Implementation.csproj",
+      "projectUniqueName": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Implementation\\Business.Implementation.csproj",
       "projectName": "Business.Implementation",
-      "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Implementation\\Business.Implementation.csproj",
+      "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Implementation\\Business.Implementation.csproj",
       "packagesPath": "C:\\Users\\stnkj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Implementation\\obj\\",
+      "outputPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Implementation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\stnkj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -889,17 +889,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Abstract\\Business.Abstract.csproj": {
-              "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Abstract\\Business.Abstract.csproj"
+            "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Abstract\\Business.Abstract.csproj": {
+              "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Abstract\\Business.Abstract.csproj"
             },
-            "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj": {
-              "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj"
+            "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj": {
+              "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj"
             },
-            "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Abstract\\Data.Abstract.csproj": {
-              "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Abstract\\Data.Abstract.csproj"
+            "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Data.Abstract\\Data.Abstract.csproj": {
+              "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Data.Abstract\\Data.Abstract.csproj"
             },
-            "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj": {
-              "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj"
+            "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj": {
+              "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj"
             }
           }
         }

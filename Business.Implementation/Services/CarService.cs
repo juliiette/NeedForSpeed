@@ -50,7 +50,7 @@ namespace Business.Implementation.Services
 
                 timer.Start();
                 
-            } while (car.CarRide);
+            } while (car.CanRide);
             
             timer.Stop();
             
@@ -71,7 +71,7 @@ namespace Business.Implementation.Services
         {
             if (car.Motor != null && car.Battery != null && car.Rim != null)
             {
-                car.CarRide = true;
+                car.CanRide = true;
                 _detailsUsed.Add(car.Battery);
                 _detailsUsed.Add(car.Motor);
                 _detailsUsed.Add(car.Rim);

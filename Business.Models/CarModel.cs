@@ -12,6 +12,6 @@ namespace Business.Models
 
         public int Distance { get; set; }
 
-        public bool CarRide { get; set; }
+        public bool CanRide { get; set; }
     }
 }

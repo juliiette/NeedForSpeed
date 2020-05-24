@@ -19,10 +19,15 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
+        <!--Текст первой колонки + Кнопка РАЙД-->
         <TextBlock Grid.Row="0" Grid.Column="0" Margin="10" Background="Pink" VerticalAlignment="Center"
                        Text="DETAILS SHOP" FontWeight="Bold" FontSize="20" TextAlignment="Center" MinHeight="30"/>
         <TextBlock Grid.Row="4" Grid.Column="0" Margin="10" Text="Cash: " FontSize="18" TextAlignment="Left"></TextBlock>
+        <Button Content="Ride" HorizontalAlignment="Left" Margin="297,7,0,0" Grid.Row="4" VerticalAlignment="Top" Height="31" Width="93"/>
+        <TextBlock Text="{Binding PlayerModel.Cash}" HorizontalAlignment="Left" Margin="58,10,0,0" Grid.Row="4" Grid.Column="0"  TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
 
+        
+        <!--Листобокс всех деталей-->
         <ListBox Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Margin="10 0 10 10"
                      ItemsSource="{Binding Details}" SelectedItem="{Binding SelectedDetail}"
                      ScrollViewer.VerticalScrollBarVisibility="Hidden">
@@ -38,14 +43,11 @@
                                 <StackPanel>
                                     <TextBlock Text="{Binding DetailType}"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding CookingTime.Minutes}"/>
+                                        <TextBlock Text="{Binding RetailCost}" FontSize="16"/>
+                                        <TextBlock Text=" y.e." FontSize="16"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding RetailCost}"/>
-                                        <TextBlock Text=" y.e."/>
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding Stability}" FontSize="18"/>
+                                        <TextBlock Text="{Binding Stability}" FontSize="16"/>
                                     </StackPanel>
                                 </StackPanel>
                             </StackPanel>
@@ -54,11 +56,18 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-
+        
+        
+        <!--Вторая колонка-->
         <TextBlock Grid.Row="0" Grid.Column="1" Margin="10" Background="Pink" VerticalAlignment="Center"
                        Text="MY CAR" FontWeight="Bold" FontSize="20" TextAlignment="Center" MinHeight="30"/>
         <TextBlock Grid.Row="4" Grid.Column="1" Margin="10" Text="Income: " FontSize="18" TextAlignment="Left"/>
-        <TextBlock Text="{Binding Player.Cash}" HorizontalAlignment="Left" Margin="58,10,0,0" Grid.Row="4" Grid.Column="0"  TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
-        <Button Content="Ride" HorizontalAlignment="Left" Margin="297,7,0,0" Grid.Row="4" VerticalAlignment="Top" Height="31" Width="93"/>
+    
+        <!--листбокс деталей машины-->
+        <ListBox Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Margin="10 0 10 10"
+                 ItemsSource="{Binding Car}">
+            
+        </ListBox>
+    
     </Grid>
 </Window>

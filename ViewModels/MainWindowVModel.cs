@@ -30,7 +30,21 @@ namespace ViewModel
             }
         }
 
-   
+        //private RelayCommand addDetailToCar;
+        //public RelayCommand AddDetailToCar
+        //{
+        //    get
+        //    {
+        //        return addDetailToCar ??= new RelayCommand(parameter =>
+        //        {
+        //            if (parameter is DetailModel selectedDetail)
+        //            {
+        //                _detailService.BuyDetail(parameter, car, player);
+        //                Car.Add(parameter);
+        //            }
+        //        });
+        //    }
+        //}
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
