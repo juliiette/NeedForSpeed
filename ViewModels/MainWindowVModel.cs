@@ -8,47 +8,15 @@ namespace ViewModel
 {
     public partial class MainWindowVModel : INotifyPropertyChanging
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        public event PropertyChangingEventHandler PropertyChanging;
-
         private readonly IDetailService _detailService;
         private readonly ICarService _carService;
+     
+        private CarModel _car;
+        private PlayerModel _player;
 
-        public ObservableCollection<DetailModel> Details { get; set; }
-        public ObservableCollection<DetailModel> Car { get; set; }
-
-        private CarModel car;
-        private PlayerModel player;
-       
-
-        private DetailModel selectedDetail;
-        public DetailModel SelectedDetail
-        {
-            get { return selectedDetail; }
-            set { selectedDetail = value;
-                OnPropertyChanged(nameof(SelectedDetail));
-            }
-        }
-
-        private DetailModel addDetailToCar;
-        public DetailModel AddDetailToCar
-        {
-            get { return selectedDetail; }
-            set
-            {
-                addDetailToCar = value;
-                OnPropertyChanged(nameof(AddDetailToCar));
-                _detailService.BuyDetail(addDetailToCar, car, player);
-                Car.Add(addDetailToCar);
-            }
-        }
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-
+        private DetailModel _selectedDetail;
+        private DetailModel _addDetailToCar;
+        
         public MainWindowVModel(IDetailService detailService, ICarService carService)
         {
             _detailService = detailService;
@@ -56,14 +24,61 @@ namespace ViewModel
 
             Details = new ObservableCollection<DetailModel>(detailService.GetAll());
             Car = new ObservableCollection<DetailModel>();
-            
-            player = new PlayerModel();
-            player.Name = "Garik";
-            player.Car = car;
-            player.Cash = 1000;
 
+            var player = new PlayerModel();
+            player.Name = "Garik";
+            player.Car = _car;
+            player.Cash = 1000;
+            Player = player;
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangingEventHandler PropertyChanging;
+        public ObservableCollection<DetailModel> Details { get; set; }
+        public ObservableCollection<DetailModel> Car { get; set; }
+
+        public PlayerModel Player
+        {
+            get => _player;
+            set
+            {
+                _player = value;
+                OnPropertyChanged("Player");
+            }
+        }
+
+        public DetailModel SelectedDetail
+        {
+            get => _selectedDetail;
+            set
+            {
+                _selectedDetail = value;
+                OnPropertyChanged(nameof(SelectedDetail));
+            }
+        }
+
+
+
+        public DetailModel AddDetailToCar
+        {
+            get => _selectedDetail;
+            set
+            {
+                _addDetailToCar = value;
+                OnPropertyChanged(nameof(AddDetailToCar));
+                _detailService.BuyDetail(_addDetailToCar, _car, _player);
+                Car.Add(_addDetailToCar);
+            }
+        }
+        
+
+        
+        
+        
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
     }
 }

@@ -24,7 +24,7 @@
                        Text="DETAILS SHOP" FontWeight="Bold" FontSize="20" TextAlignment="Center" MinHeight="30"/>
         <TextBlock Grid.Row="4" Grid.Column="0" Margin="10" Text="Cash: " FontSize="18" TextAlignment="Left"></TextBlock>
         <Button Content="Ride" HorizontalAlignment="Left" Margin="297,7,0,0" Grid.Row="4" VerticalAlignment="Top" Height="31" Width="93"/>
-        <TextBlock Text="{Binding player.Cash}" HorizontalAlignment="Left" Margin="58,10,0,0" Grid.Row="4" Grid.Column="0"  
+        <TextBlock Text="{Binding Player.Cash}" HorizontalAlignment="Left" Margin="58,10,0,0" Grid.Row="4" Grid.Column="0"  
                    TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
 
         
