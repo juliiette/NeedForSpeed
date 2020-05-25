@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.Implementation.Repositories
 {
-    internal class CarRepository : Repository<Car>, ICarRepository
+    internal class CarRepository : Repository<int, Car>, ICarRepository
     {
         private readonly NFSContext _context;
 

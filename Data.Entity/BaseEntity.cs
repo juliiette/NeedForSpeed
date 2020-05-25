@@ -1,7 +1,7 @@
 namespace Data.Entity
 {
-    public class BaseEntity
+    public abstract class BaseEntity<TKey>
     {
-        public int Id { get; set; }
+        public TKey Id { get; set; }
     }
 }

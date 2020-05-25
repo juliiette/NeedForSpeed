@@ -1,6 +1,8 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Windows;
 using Business.Abstract.Services;
 using Business.Models;
 
@@ -11,7 +13,6 @@ namespace ViewModel
         private readonly ICarService _carService;
         private readonly IDetailService _detailService;
         private readonly IPlayerService _playerService;
-        private RelayCommand _addDetailToCar;
         private PlayerModel _player;
 
         private DetailModel _selectedDetail;
@@ -54,15 +55,49 @@ namespace ViewModel
             }
         }
 
-
+        private RelayCommand _addDetailToCar;
         public RelayCommand AddDetailToCar => _addDetailToCar ??= new RelayCommand(o =>
         {
+            var newDetailsList = CarDetailsList.ToList<DetailModel>();
+            foreach (DetailModel detail in newDetailsList)
+            {
+                if (detail.DetailType == SelectedDetail.DetailType)
+                {
+                    _detailService.SellDetail(detail, Car, Player);
+                    newDetailsList.Remove(detail);
+                    CarDetailsList.Remove(detail);
+                }
+                break;
+            }
             _detailService.BuyDetail(SelectedDetail, Car, Player);
             CarDetailsList.Add(SelectedDetail);
+
         }, o => CheckCash(SelectedDetail));
 
-        public event PropertyChangingEventHandler PropertyChanging;
 
+        private RelayCommand _sellDetail;
+        public RelayCommand SellDetail => _sellDetail ??= new RelayCommand(o =>
+        {
+            _detailService.SellDetail(SelectedDetail, Car, Player);
+            CarDetailsList.Remove(SelectedDetail);
+        }, o => CheckCash(SelectedDetail));
+
+
+        private RelayCommand _rideCommand;
+        public RelayCommand RideCommand => _rideCommand ??= new RelayCommand(o =>
+        {
+            if (CarDetailsList.Count == 3)
+            {
+                _carService.CollectCar(Car, Player);
+            }
+            else
+            {
+                MessageBox.Show("I have no needed details :(");
+            }
+        });
+
+
+        public event PropertyChangingEventHandler PropertyChanging;
         public event PropertyChangedEventHandler PropertyChanged;
 
         private bool CheckCash(DetailModel detailModel)

@@ -1,6 +1,6 @@
 namespace Data.Entity
 {
-    public class Player : BaseEntity
+    public class Player : BaseEntity<int>
     {
         public string Name { get; set; }
 

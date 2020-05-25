@@ -2,7 +2,7 @@
 
 namespace Data.Abstract
 {
-    public interface ICarRepository : IRepository<Car>
+    public interface ICarRepository : IRepository<int, Car>
     {
     }
 }

@@ -1,5 +1,7 @@
 using Data.Entity;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+
 
 namespace Data.Implementation
 {
@@ -7,17 +9,16 @@ namespace Data.Implementation
     {
         public NFSContext(DbContextOptions<NFSContext> options)
         {
+            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
-        public NFSContext()
+        public NFSContext() : base()
         {
         }
 
         public DbSet<Detail> Details { get; set; }
-
         public DbSet<Car> Cars { get; set; }
-
         public DbSet<Player> Players { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -62,14 +63,33 @@ namespace Data.Implementation
                 },
                 new Detail
                 {
+                    Id = 33,
+                    Name = "Not So Gold Rim",
+                    DetailType = DetailType.Rim,
+                    RetailCost = 200,
+                    RepairCost = 100,
+                    Stability = 0.7
+                },
+                new Detail
+                {
                     Id = 5,
                     Name = "Poor Battery YM-49",
                     DetailType = DetailType.Battery,
                     RetailCost = 80,
                     RepairCost = 120,
                     Stability = 0.5
+                },
+                new Detail
+                {
+                    Id = 6,
+                    Name = "Good Battery TT",
+                    DetailType = DetailType.Battery,
+                    RetailCost = 120,
+                    RepairCost = 100,
+                    Stability = 0.8
                 }
             );
         }
+
     }
 }

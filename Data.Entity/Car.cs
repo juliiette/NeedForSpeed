@@ -1,6 +1,6 @@
 namespace Data.Entity
 {
-    public class Car : BaseEntity
+    public class Car : BaseEntity<int>
     {
         public Detail Motor { get; set; }
 
@@ -10,6 +10,6 @@ namespace Data.Entity
 
         public int Distance { get; set; }
 
-        public bool CanRide { get; set; }
+        public bool CarRide { get; set; }
     }
 }

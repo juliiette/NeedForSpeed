@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.Implementation.Repositories
 {
-    internal class DetailRepository : Repository<Detail>, IDetailRepository
+    internal class DetailRepository : Repository<int, Detail>, IDetailRepository
     {
         private readonly NFSContext _context;
 

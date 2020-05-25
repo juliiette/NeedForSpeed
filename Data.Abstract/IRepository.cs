@@ -1,12 +1,14 @@
+using Data.Entity;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Data.Abstract
 {
-    public interface IRepository<TEntity> where TEntity : class
+    public interface IRepository<TKey, TEntity> where TEntity : class
     {
         IEnumerable<TEntity> GetAll();
 
-        TEntity GetById(int id);
+        TEntity GetById(TKey id);
 
         void Create(TEntity item);
 

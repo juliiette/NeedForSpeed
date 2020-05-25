@@ -2,7 +2,7 @@
 
 namespace Data.Abstract
 {
-    public interface IDetailRepository : IRepository<Detail>
+    public interface IDetailRepository : IRepository<int, Detail>
     {
     }
 }

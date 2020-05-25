@@ -2,7 +2,7 @@
 
 namespace Data.Abstract
 {
-    public interface IPlayerRepository : IRepository<Player>
+    public interface IPlayerRepository : IRepository<int, Player>
     {
     }
 }

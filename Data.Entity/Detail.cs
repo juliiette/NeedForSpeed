@@ -1,6 +1,6 @@
 namespace Data.Entity
 {
-    public class Detail : BaseEntity
+    public class Detail : BaseEntity<int>
     {
         public Detail()
         {

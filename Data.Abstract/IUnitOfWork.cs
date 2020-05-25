@@ -1,15 +1,17 @@
 using Data.Entity;
+using System;
 
 namespace Data.Abstract
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
-        IRepository<Detail> DetailRepository { get; }
+        IRepository<int, Detail> DetailRepository { get; }
 
-        IRepository<Car> CarRepository { get; }
+        IRepository<int, Car> CarRepository { get; }
 
-        IRepository<Player> PlayerRepository { get; }
+        IRepository<int, Player> PlayerRepository { get; }
 
         void Save();
+
     }
 }

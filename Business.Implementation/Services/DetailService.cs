@@ -77,7 +77,7 @@ namespace Business.Implementation.Services
             if (detail.Stability <= 0.2)
             {
                 detail.CanFunction = false;
-                car.CanRide = false;
+                car.CarRide = false;
             }
             else
             {
@@ -88,7 +88,7 @@ namespace Business.Implementation.Services
                 if (random.NextDouble() < propability)
                 {
                     detail.CanFunction = false;
-                    car.CanRide = false;
+                    car.CarRide = false;
                 }
             }
         }
@@ -99,7 +99,7 @@ namespace Business.Implementation.Services
             if (detail.Stability <= 0.2)
             {
                 detail.CanFunction = false;
-                car.CanRide = false;
+                car.CarRide = false;
             }
             else
             {

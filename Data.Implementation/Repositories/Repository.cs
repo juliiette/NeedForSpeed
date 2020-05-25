@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using Data.Abstract;
+using Data.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Implementation
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class Repository<TKey, TEntity> : IRepository<TKey, TEntity> where TEntity : class
     {
         private readonly NFSContext _context;
 
@@ -15,16 +16,16 @@ namespace Data.Implementation
         {
             _context = context;
 
-            _dbSet = context.Set<TEntity>();
+            _dbSet = _context.Set<TEntity>();
         }
 
 
         public IEnumerable<TEntity> GetAll()
         {
-            return _dbSet.AsNoTracking().ToList();
+            return _dbSet.AsNoTracking();
         }
 
-        public TEntity GetById(int id)
+        public TEntity GetById(TKey id)
         {
             return _dbSet.Find(id);
         }

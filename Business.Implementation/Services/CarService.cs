@@ -47,7 +47,7 @@ namespace Business.Implementation.Services
                 timer.Enabled = true;
 
                 timer.Start();
-            } while (car.CanRide);
+            } while (car.CarRide);
 
             timer.Stop();
 
@@ -62,7 +62,7 @@ namespace Business.Implementation.Services
         {
             if (car.Motor != null && car.Battery != null && car.Rim != null)
             {
-                car.CanRide = true;
+                car.CarRide = true;
                 _detailsUsed.Add(car.Battery);
                 _detailsUsed.Add(car.Motor);
                 _detailsUsed.Add(car.Rim);
@@ -87,9 +87,16 @@ namespace Business.Implementation.Services
         {
             var carEntity = _mapper.Map<Car>(carModel);
             var playerEntity = _mapper.Map<Player>(playerModel);
+            var motor = _mapper.Map<Detail>(carModel.Motor);
+            var battery = _mapper.Map<Detail>(carModel.Battery);
+            var rim = _mapper.Map<Detail>(carModel.Rim);
 
+            _unit.DetailRepository.Update(motor);
+            _unit.DetailRepository.Update(battery);
+            _unit.DetailRepository.Update(rim);
             _unit.CarRepository.Update(carEntity);
             _unit.PlayerRepository.Update(playerEntity);
+
         }
 
         private void OnTimerEvent(object source, ElapsedEventArgs e)
