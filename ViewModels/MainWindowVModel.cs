@@ -14,7 +14,6 @@ namespace ViewModel
         private readonly IDetailService _detailService;
         private readonly IPlayerService _playerService;
         private PlayerModel _player;
-
         private DetailModel _selectedDetail;
 
         public MainWindowVModel(IDetailService detailService, ICarService carService, IPlayerService playerService)
@@ -28,7 +27,7 @@ namespace ViewModel
             SelectedDetail = Details.FirstOrDefault();
 
             Car = new CarModel();
-            Player = new PlayerModel {Name = "Garik", Car = Car, Cash = 1000};
+            Player = new PlayerModel { Name = "Garik", Car = Car, Cash = 1000 };
         }
 
         private CarModel Car { get; }
@@ -93,6 +92,16 @@ namespace ViewModel
             else
             {
                 MessageBox.Show("I have no needed details :(");
+            }
+        });
+
+
+        private RelayCommand _repairCommand;
+        public RelayCommand RepairCommand => _repairCommand ??= new RelayCommand(o =>
+        {
+            if (SelectedDetail.CanFunction == false)
+            {
+                _detailService.RepairDetail(SelectedDetail, Car, Player);
             }
         });
 

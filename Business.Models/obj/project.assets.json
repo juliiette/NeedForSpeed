@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Data.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Data.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.Entity.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Data.Entity/1.0.0": {
+      "type": "project",
+      "path": "../Data.Entity/Data.Entity.csproj",
+      "msbuildProject": "../Data.Entity/Data.Entity.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Data.Entity >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\stnkj\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj",
+      "projectUniqueName": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj",
       "projectName": "Business.Models",
-      "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj",
+      "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Models\\Business.Models.csproj",
       "packagesPath": "C:\\Users\\stnkj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Models\\obj\\",
+      "outputPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\stnkj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -32,7 +51,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj": {
+              "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

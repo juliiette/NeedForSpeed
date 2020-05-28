@@ -24,8 +24,16 @@
         }
       },
       "Business.Models/1.0.0": {
+        "dependencies": {
+          "Data.Entity": "1.0.0"
+        },
         "runtime": {
           "Business.Models.dll": {}
+        }
+      },
+      "Data.Entity/1.0.0": {
+        "runtime": {
+          "Data.Entity.dll": {}
         }
       }
     }
@@ -42,6 +50,11 @@
       "sha512": ""
     },
     "Business.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Data.Entity/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

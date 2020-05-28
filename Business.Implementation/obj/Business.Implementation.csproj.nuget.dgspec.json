@@ -153,7 +153,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj": {
+                "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

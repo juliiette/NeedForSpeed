@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Business.Models;
+using Data.Entity;
 
 namespace Business.Abstract.Services
 {
@@ -7,7 +8,7 @@ namespace Business.Abstract.Services
     {
         IEnumerable<DetailModel> GetAll();
 
-        IEnumerable<DetailModel> GetSpecial(DetailTypeModel type);
+        IEnumerable<DetailModel> GetSpecial(DetailType type);
 
         void BuyDetail(DetailModel detail, CarModel car, PlayerModel player);
 

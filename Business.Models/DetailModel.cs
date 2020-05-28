@@ -1,3 +1,5 @@
+using Data.Entity;
+
 namespace Business.Models
 {
     public class DetailModel
@@ -6,7 +8,7 @@ namespace Business.Models
 
         public string Name { get; set; }
 
-        public DetailTypeModel DetailType { get; set; }
+        public DetailType DetailType { get; set; }
 
         public int RetailCost { get; set; }
 

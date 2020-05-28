@@ -12,3 +12,5 @@ C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModels\obj\Debug\netcorea
 C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModels\obj\Debug\netcoreapp3.1\ViewModel.csproj.CopyComplete
 C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModels\obj\Debug\netcoreapp3.1\ViewModel.dll
 C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModels\obj\Debug\netcoreapp3.1\ViewModel.pdb
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModels\bin\Debug\netcoreapp3.1\Data.Entity.dll
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\ViewModels\bin\Debug\netcoreapp3.1\Data.Entity.pdb

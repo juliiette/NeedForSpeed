@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using Business.Abstract.Services;
+using Business.Implementation.Mapper;
 using Business.Models;
 using Data.Abstract;
+using Data.Entity;
 
 namespace Business.Implementation.Services
 {
@@ -21,6 +23,7 @@ namespace Business.Implementation.Services
             _playerService = playerService;
 
             _unit = unit;
+            //_mappingService = new MappingService(unit);
             _mapper = mapper;
         }
 
@@ -31,15 +34,15 @@ namespace Business.Implementation.Services
             {
                 switch (detail.DetailType)
                 {
-                    case DetailTypeModel.Battery:
+                    case DetailType.Battery:
                         car.Battery = detail;
                         break;
 
-                    case DetailTypeModel.Motor:
+                    case DetailType.Motor:
                         car.Motor = detail;
                         break;
 
-                    case DetailTypeModel.Rim:
+                    case DetailType.Rim:
                         car.Rim = detail;
                         break;
                 }
@@ -55,15 +58,15 @@ namespace Business.Implementation.Services
         {
             switch (detail.DetailType)
             {
-                case DetailTypeModel.Battery:
+                case DetailType.Battery:
                     car.Battery = null;
                     break;
 
-                case DetailTypeModel.Motor:
+                case DetailType.Motor:
                     car.Motor = null;
                     break;
 
-                case DetailTypeModel.Rim:
+                case DetailType.Rim:
                     car.Rim = null;
                     break;
             }
@@ -136,7 +139,7 @@ namespace Business.Implementation.Services
             return _mapper.Map<IEnumerable<DetailModel>>(details);
         }
 
-        public IEnumerable<DetailModel> GetSpecial(DetailTypeModel type)
+        public IEnumerable<DetailModel> GetSpecial(DetailType type)
         {
             var specialDetails = GetAll().Where(d => d.DetailType == type);
 

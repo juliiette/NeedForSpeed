@@ -5,6 +5,7 @@ using Business.Abstract.Services;
 using Business.Models;
 using Data.Abstract;
 using Data.Entity;
+using Business.Implementation.Mapper;
 
 namespace Business.Implementation.Services
 {
@@ -14,22 +15,20 @@ namespace Business.Implementation.Services
 
         private readonly List<DetailModel> _detailsUsed = new List<DetailModel>();
         private readonly IMapper _mapper;
-
+        private readonly MappingService _mappingService;
         private readonly IUnitOfWork _unit;
 
         private CarModel _car;
-
         private DetailModel _detail = new DetailModel();
-
         private int _distance;
 
 
         public CarService(IDetailService detailService, IMapper mapper, IUnitOfWork unit)
         {
             _detailService = detailService;
-
             _mapper = mapper;
             _unit = unit;
+            _mappingService = new MappingService(unit);
         }
 
 
@@ -80,16 +79,20 @@ namespace Business.Implementation.Services
 
             player.Cash += sum;
 
-            UpdateEntity(car, player);
+           UpdateEntity(car, player);
         }
 
         public void UpdateEntity(CarModel carModel, PlayerModel playerModel)
         {
             var carEntity = _mapper.Map<Car>(carModel);
             var playerEntity = _mapper.Map<Player>(playerModel);
-            var motor = _mapper.Map<Detail>(carModel.Motor);
-            var battery = _mapper.Map<Detail>(carModel.Battery);
-            var rim = _mapper.Map<Detail>(carModel.Rim);
+
+            var motor = _mappingService.Map(carModel.Motor);
+            var battery = _mappingService.Map(carModel.Battery);
+            var rim = _mappingService.Map(carModel.Rim);
+            //var motor = _mapper.Map<Detail>(carModel.Motor);
+            //var battery = _mapper.Map<Detail>(carModel.Battery);
+            //var rim = _mapper.Map<Detail>(carModel.Rim);
 
             _unit.DetailRepository.Update(motor);
             _unit.DetailRepository.Update(battery);

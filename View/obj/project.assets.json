@@ -1673,6 +1673,9 @@
       "Business.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Data.Entity": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Business.Models.dll": {}
         },

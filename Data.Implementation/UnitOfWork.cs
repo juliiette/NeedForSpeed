@@ -9,8 +9,8 @@ namespace Data.Implementation
     {
         private readonly NFSContext _context;
 
-        public UnitOfWork(IRepository<int, Detail> detailRepository, IRepository<int, Car> carRepository,
-            IRepository<int, Player> playerRepository, NFSContext context)
+        public UnitOfWork(IDetailRepository detailRepository, ICarRepository carRepository,
+            IPlayerRepository playerRepository, NFSContext context)
         {
             _context = context;
 
@@ -19,9 +19,9 @@ namespace Data.Implementation
             PlayerRepository = playerRepository;
         }
 
-        public IRepository<int, Detail> DetailRepository { get; }
-        public IRepository<int, Car> CarRepository { get; }
-        public IRepository<int, Player> PlayerRepository { get; }
+        public IDetailRepository  DetailRepository { get; }
+        public ICarRepository CarRepository { get; }
+        public IPlayerRepository PlayerRepository { get; }
 
 
         public void Save()

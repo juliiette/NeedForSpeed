@@ -63,7 +63,7 @@ namespace Data.Implementation
                 },
                 new Detail
                 {
-                    Id = 33,
+                    Id = 36,
                     Name = "Not So Gold Rim",
                     DetailType = DetailType.Rim,
                     RetailCost = 200,
@@ -81,7 +81,7 @@ namespace Data.Implementation
                 },
                 new Detail
                 {
-                    Id = 6,
+                    Id = 229,
                     Name = "Good Battery TT",
                     DetailType = DetailType.Battery,
                     RetailCost = 120,

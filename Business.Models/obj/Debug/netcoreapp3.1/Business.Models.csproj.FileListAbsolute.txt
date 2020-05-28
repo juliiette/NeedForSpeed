@@ -7,3 +7,6 @@ C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Business.Models\obj\Debug\net
 C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Business.Models\obj\Debug\netcoreapp3.1\Business.Models.dll
 C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Business.Models\obj\Debug\netcoreapp3.1\Business.Models.pdb
 C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\Business.Models\obj\Debug\netcoreapp3.1\Business.Models.csprojAssemblyReference.cache
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\Business.Models\bin\Debug\netcoreapp3.1\Data.Entity.dll
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\Business.Models\bin\Debug\netcoreapp3.1\Data.Entity.pdb
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\Business.Models\obj\Debug\netcoreapp3.1\Business.Models.csproj.CopyComplete

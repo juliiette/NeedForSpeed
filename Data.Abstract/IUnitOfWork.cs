@@ -5,11 +5,11 @@ namespace Data.Abstract
 {
     public interface IUnitOfWork : IDisposable
     {
-        IRepository<int, Detail> DetailRepository { get; }
+        IDetailRepository DetailRepository { get; }
 
-        IRepository<int, Car> CarRepository { get; }
+        ICarRepository CarRepository { get; }
 
-        IRepository<int, Player> PlayerRepository { get; }
+        IPlayerRepository PlayerRepository { get; }
 
         void Save();
 

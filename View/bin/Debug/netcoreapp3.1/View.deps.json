@@ -1030,6 +1030,9 @@
         }
       },
       "Business.Models/1.0.0": {
+        "dependencies": {
+          "Data.Entity": "1.0.0"
+        },
         "runtime": {
           "Business.Models.dll": {}
         }

@@ -10,3 +10,5 @@ C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Business.Abstract\obj\Debug\n
 C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Business.Abstract\obj\Debug\netcoreapp3.1\Business.Abstract.csproj.CopyComplete
 C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Business.Abstract\obj\Debug\netcoreapp3.1\Business.Abstract.dll
 C:\Users\stnkj\Source\Repos\juliiette\NeedForSpeed\Business.Abstract\obj\Debug\netcoreapp3.1\Business.Abstract.pdb
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\Business.Abstract\bin\Debug\netcoreapp3.1\Data.Entity.dll
+C:\Users\stnkj\source\repos\juliiette\NeedForSpeed\Business.Abstract\bin\Debug\netcoreapp3.1\Data.Entity.pdb

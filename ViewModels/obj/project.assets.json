@@ -18,11 +18,24 @@
       "Business.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Data.Entity": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Business.Models.dll": {}
         },
         "runtime": {
           "bin/placeholder/Business.Models.dll": {}
+        }
+      },
+      "Data.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Data.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.Entity.dll": {}
         }
       }
     }
@@ -37,6 +50,11 @@
       "type": "project",
       "path": "../Business.Models/Business.Models.csproj",
       "msbuildProject": "../Business.Models/Business.Models.csproj"
+    },
+    "Data.Entity/1.0.0": {
+      "type": "project",
+      "path": "../Data.Entity/Data.Entity.csproj",
+      "msbuildProject": "../Data.Entity/Data.Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {

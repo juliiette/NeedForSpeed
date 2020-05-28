@@ -65,12 +65,14 @@
         <!--Вторая колонка-->
         <TextBlock Grid.Row="0" Grid.Column="1" Margin="10" Background="Pink" VerticalAlignment="Center"
                    Text="MY CAR" FontWeight="Bold" FontSize="20" TextAlignment="Center" MinHeight="30" />
-        <TextBlock Grid.Row="4" Grid.Column="1" Margin="10" Text="Income: " FontSize="18" TextAlignment="Left" />
+        <TextBlock Grid.Row="4" Grid.Column="1" Margin="10" Text="Distance: " FontSize="18" TextAlignment="Left" />
         <TextBlock Grid.Row="4" Grid.Column="1" Margin="86,10,164,10" Text="{Binding Car.Distance}" FontSize="18"/>
-
+        <Button Content="Repair" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top"
+            Height="31" Width="93" Command="{Binding DataContext.RepairCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Grid.Column="1"/>
+        
         <!--листбокс деталей машины-->
         <ListBox Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Margin="10 0 10 10"
-                 ItemsSource="{Binding CarDetailsList}">
+                 ItemsSource="{Binding CarDetailsList}" ScrollViewer.VerticalScrollBarVisibility="Hidden">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -90,6 +92,10 @@
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="{Binding Stability}" FontSize="16" />
                                     </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Can func:" FontSize="16" />
+                                        <TextBlock Text="{Binding CanFunction}" FontSize="16" />
+                                    </StackPanel>
                                 </StackPanel>
                             </StackPanel>
                         </Expander>
@@ -97,6 +103,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        
 
     </Grid>
 </Window>
