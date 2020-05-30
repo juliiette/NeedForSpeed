@@ -117,6 +117,8 @@ namespace Business.Implementation.Services
                     detail.RepairCost = detail.RepairCost + 20;
 
                     detail.CanFunction = true;
+
+                    car.CarRide = true;
                 }
             }
         }
@@ -129,6 +131,18 @@ namespace Business.Implementation.Services
             randDetail = detailsUsed[rand.Next(detailsUsed.Count)];
 
             return randDetail;
+        }
+
+        public bool CheckDetailFunctioning(DetailModel detailModel)
+        {
+            if (detailModel.CanFunction == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
 

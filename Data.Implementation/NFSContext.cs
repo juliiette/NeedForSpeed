@@ -7,7 +7,7 @@ namespace Data.Implementation
 {
     public class NFSContext : DbContext
     {
-        public NFSContext(DbContextOptions<NFSContext> options)
+        public NFSContext(DbContextOptions<NFSContext> options) : base(options)
         {
             Database.EnsureDeleted();
             Database.EnsureCreated();

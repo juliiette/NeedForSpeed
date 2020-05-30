@@ -32,7 +32,17 @@ namespace ViewModel
 
         private CarModel Car { get; }
         public ObservableCollection<DetailModel> Details { get; set; }
-        public ObservableCollection<DetailModel> CarDetailsList { get; set; }
+
+        private ObservableCollection<DetailModel> carDetailsList;
+        public ObservableCollection<DetailModel> CarDetailsList
+        {
+            get => carDetailsList;
+            set
+            {
+                carDetailsList = value;
+                OnPropertyChanged("CarDetailsList");
+            }
+        }
 
         public PlayerModel Player
         {

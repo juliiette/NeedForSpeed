@@ -23,7 +23,7 @@ namespace Data.Implementation
 
         public IEnumerable<TEntity> GetAll()
         {
-            return _dbSet.AsNoTracking();
+            return _dbSet.AsNoTracking().ToList();
         }
 
         public TEntity GetById(TKey id)

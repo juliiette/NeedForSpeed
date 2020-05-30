@@ -15,7 +15,6 @@ namespace Business.Implementation.Services
 
         private readonly List<DetailModel> _detailsUsed = new List<DetailModel>();
         private readonly IMapper _mapper;
-        private readonly MappingService _mappingService;
         private readonly IUnitOfWork _unit;
 
         private CarModel _car;
@@ -28,7 +27,6 @@ namespace Business.Implementation.Services
             _detailService = detailService;
             _mapper = mapper;
             _unit = unit;
-            _mappingService = new MappingService(unit);
         }
 
 
@@ -59,15 +57,29 @@ namespace Business.Implementation.Services
 
         public void CollectCar(CarModel car, PlayerModel player)
         {
+            _detailsUsed.Clear();
             if (car.Motor != null && car.Battery != null && car.Rim != null)
             {
-                car.CarRide = true;
+                //car.CarRide = true;
                 _detailsUsed.Add(car.Battery);
                 _detailsUsed.Add(car.Motor);
                 _detailsUsed.Add(car.Rim);
-                Ride(car, player);
 
-                UpdateEntity(car, player);
+                int costil = 0;
+                foreach (var detail in _detailsUsed)
+                {
+                    if (detail.CanFunction == false)
+                    {
+                        costil += 1;
+                    }
+                }
+
+                if (costil == 0)
+                {
+                    car.CarRide = true;
+                    Ride(car, player);
+                    UpdateEntity(car, player);
+                }
             }
         }
 
@@ -87,16 +99,13 @@ namespace Business.Implementation.Services
             var carEntity = _mapper.Map<Car>(carModel);
             var playerEntity = _mapper.Map<Player>(playerModel);
 
-            var motor = _mappingService.Map(carModel.Motor);
-            var battery = _mappingService.Map(carModel.Battery);
-            var rim = _mappingService.Map(carModel.Rim);
-            //var motor = _mapper.Map<Detail>(carModel.Motor);
-            //var battery = _mapper.Map<Detail>(carModel.Battery);
-            //var rim = _mapper.Map<Detail>(carModel.Rim);
+            var motor = _mapper.Map<Detail>(carModel.Motor);
+            var battery = _mapper.Map<Detail>(carModel.Battery);
+            var rim = _mapper.Map<Detail>(carModel.Rim);
 
-            _unit.DetailRepository.Update(motor);
-            _unit.DetailRepository.Update(battery);
-            _unit.DetailRepository.Update(rim);
+            //_unit.DetailRepository.Update(motor);
+            //_unit.DetailRepository.Update(battery);
+            //_unit.DetailRepository.Update(rim);
             _unit.CarRepository.Update(carEntity);
             _unit.PlayerRepository.Update(playerEntity);
 

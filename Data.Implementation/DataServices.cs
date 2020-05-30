@@ -9,7 +9,7 @@ namespace Data.Implementation
     {
         public static void ConfigureServices(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddDbContext<NFSContext>();
+            serviceCollection.AddDbContext<NFSContext>(ServiceLifetime.Singleton);
 
             serviceCollection.AddScoped(typeof(IRepository<int, Car>), typeof(Repository<int, Car>));
 
