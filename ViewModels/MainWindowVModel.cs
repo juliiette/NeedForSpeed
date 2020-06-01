@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows;
 using Business.Abstract.Services;
 using Business.Models;
+using Data.Entity;
 
 namespace ViewModel
 {
@@ -79,7 +80,22 @@ namespace ViewModel
                 break;
             }
             _detailService.BuyDetail(SelectedDetail, Car, Player);
-            CarDetailsList.Add(SelectedDetail);
+            if (SelectedDetail.DetailType == DetailType.Motor)
+            {
+                CarDetailsList.Add(Car.Motor);
+            }
+            else if (SelectedDetail.DetailType == DetailType.Battery)
+            {
+                CarDetailsList.Add(Car.Battery);
+            }
+            else if (SelectedDetail.DetailType == DetailType.Rim)
+            {
+                CarDetailsList.Add(Car.Rim);
+            }
+            if (CarDetailsList.Count == 3)
+            {
+                Player.Car.CarRide = true;
+            }
 
         }, o => CheckCash(SelectedDetail));
 
@@ -109,9 +125,14 @@ namespace ViewModel
         private RelayCommand _repairCommand;
         public RelayCommand RepairCommand => _repairCommand ??= new RelayCommand(o =>
         {
-            if (SelectedDetail.CanFunction == false)
+            foreach (var detail in CarDetailsList)
             {
-                _detailService.RepairDetail(SelectedDetail, Car, Player);
+                {
+                    if (detail.CanFunction == false)
+                    {
+                        _detailService.RepairDetail(detail, Car, Player);
+                    }
+                }
             }
         });
 

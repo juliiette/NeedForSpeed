@@ -65,8 +65,10 @@
         <!--Вторая колонка-->
         <TextBlock Grid.Row="0" Grid.Column="1" Margin="10" Background="Pink" VerticalAlignment="Center"
                    Text="MY CAR" FontWeight="Bold" FontSize="20" TextAlignment="Center" MinHeight="30" />
-        <TextBlock Grid.Row="4" Grid.Column="1" Margin="10" Text="Distance: " FontSize="18" TextAlignment="Left" />
-        <TextBlock Grid.Row="4" Grid.Column="1" Margin="86,10,164,10" Text="{Binding Car.Distance}" FontSize="18"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="Can ride: " FontSize="18" Margin="10 45 10 10"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Margin="85 45 10 10" FontSize="18" Text="{Binding Player.Car.CarRide}"/>
+            <TextBlock Grid.Row="4" Grid.Column="1" Margin="10" Text="Distance: " FontSize="18" TextAlignment="Left" />
+        <TextBlock Grid.Row="4" Grid.Column="1" Margin="86,10,164,10" Text="{Binding Player.Car.Distance}" FontSize="18" TextAlignment="Left"/>
         <Button Content="Repair" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top"
             Height="31" Width="93" Command="{Binding DataContext.RepairCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Grid.Column="1"/>
         
@@ -77,7 +79,7 @@
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <Button Content="-" Background="White" BorderThickness="0" Height="30" Width="30"
-                                FontSize="18" VerticalContentAlignment="Top" VerticalAlignment="Center"
+                                FontSize="20" VerticalContentAlignment="Top" VerticalAlignment="Center"
                                 Command="{Binding DataContext.SellDetail, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}}"
                                 CommandParameter="{Binding}" />
                         <Expander Header="{Binding Name}" Padding="5" FontSize="15">
@@ -91,10 +93,6 @@
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="{Binding Stability}" FontSize="16" />
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Can func:" FontSize="16" />
-                                        <TextBlock Text="{Binding CanFunction}" FontSize="16" />
                                     </StackPanel>
                                 </StackPanel>
                             </StackPanel>

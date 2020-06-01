@@ -11,7 +11,16 @@ namespace Business.Models
 
         public string Name { get; set; }
 
-        public CarModel Car { get; set; }
+        private CarModel car;
+        public CarModel Car
+        {
+            get => car;
+            set
+            {
+                car = value;
+                OnPropertyChanged(nameof(Car));
+            }
+        }
 
         public int Cash
         {

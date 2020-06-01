@@ -6335,11 +6335,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\View\\View.csproj",
+      "projectUniqueName": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\View\\View.csproj",
       "projectName": "View",
-      "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\View\\View.csproj",
+      "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\View\\View.csproj",
       "packagesPath": "C:\\Users\\stnkj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\View\\obj\\",
+      "outputPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\View\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\stnkj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6355,14 +6355,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Implementation\\Business.Implementation.csproj": {
-              "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Implementation\\Business.Implementation.csproj"
+            "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Implementation\\Business.Implementation.csproj": {
+              "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Implementation\\Business.Implementation.csproj"
             },
-            "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Implementation\\Data.Implementation.csproj": {
-              "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Implementation\\Data.Implementation.csproj"
+            "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Data.Implementation\\Data.Implementation.csproj": {
+              "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Data.Implementation\\Data.Implementation.csproj"
             },
-            "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\ViewModels\\ViewModel.csproj": {
-              "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\ViewModels\\ViewModel.csproj"
+            "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\ViewModels\\ViewModel.csproj": {
+              "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\ViewModels\\ViewModel.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fSUgCVNLI0+CMHQ9DLyhSKw64lvBy8ka2ahVzEDTxfbw7HrMGsm+I3yDLjzq1sELhR92pIKlgPs4t+J4WoryEg==",
+  "dgSpecHash": "VVQzGZtUs6GxoHgvGl7gFULXXy8vs3IdD5KNBZoGQf4oecGDZmLS8BlW7V7OK+f7hD9qN81LeIu/Vbmv2qtc0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Business.Implementation\\Business.Implementation.csproj",
+  "projectFilePath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Business.Implementation\\Business.Implementation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stnkj\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\stnkj\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

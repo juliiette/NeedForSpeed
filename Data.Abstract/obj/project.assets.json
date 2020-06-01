@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Abstract\\Data.Abstract.csproj",
+      "projectUniqueName": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Data.Abstract\\Data.Abstract.csproj",
       "projectName": "Data.Abstract",
-      "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Abstract\\Data.Abstract.csproj",
+      "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Data.Abstract\\Data.Abstract.csproj",
       "packagesPath": "C:\\Users\\stnkj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Abstract\\obj\\",
+      "outputPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Data.Abstract\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\stnkj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,8 +52,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj": {
-              "projectPath": "C:\\Users\\stnkj\\source\\repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj"
+            "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj": {
+              "projectPath": "C:\\Users\\stnkj\\Source\\Repos\\juliiette\\NeedForSpeed\\Data.Entity\\Data.Entity.csproj"
             }
           }
         }
